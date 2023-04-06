@@ -96,13 +96,13 @@ export default function Index() {
           <p className=" text-[#098A5B] mb-10 mt-2">
             WE ARE MORE THAN DIGITAL AGENCY
           </p>
-          <div className=" grid justify-between grid-rows-2 grid-cols-2 h-3/4 max-h-full ">
+          <div className=" grid justify-between grid-rows-2 grid-cols-2 h-full items-center place-items-center ">
             <img
               src={imagemabout1}
               width="495"
-              height="500"
+              height="575"
               alt="imagem about"
-              className=" row-span-3 max-w-full"
+              className=" row-span-3  max-h-[510px] "
             />
             <img
               src={imagemabout2}
@@ -153,15 +153,23 @@ export default function Index() {
           <p className=" text-[#098A5B] mb-10 mt-2">
             WE ARE MORE THAN DIGITAL AGENCY
           </p>
-          {testemonials.map((testemonial, index) => (
-            <CardsDepoimentos
-              key={index}
-              src={testemonial.src}
-              testemonial={testemonial.testemonial}
-              nome={testemonial.nome}
-              cargo={testemonial.cargo}
-            />
-          ))}
+          <article className=" flex justify-between">
+            {testemonials.map((testemonial, index) => (
+              <CardsDepoimentos
+                key={index}
+                src={testemonial.src}
+                testemonial={testemonial.testemonial}
+                nome={testemonial.nome}
+                cargo={testemonial.cargo}
+              />
+            ))}
+          </article>
+        </section>
+      </div>
+      <div>
+        <section className=" text-white mt-20">
+          <p className=" text-3xl font-bold">Latest News</p>
+          <p className=" text-[#098A5B]">CHECK OUT SOME OF OUR NEWS</p>
         </section>
       </div>
     </>
