@@ -15,6 +15,8 @@ import imagemabout3 from "public/about3.png";
 
 // Services content
 import { services } from "~/utils/services";
+import { testemonials } from "~/utils/testemonials";
+import CardsDepoimentos from "~/components/Cards/CardsDepoimentos";
 
 // Meta
 export const meta: V2_MetaFunction = () => {
@@ -85,7 +87,7 @@ export default function Index() {
         </section>
       </div>
       <div className=" bg-[#101017]">
-        <section>
+        <section className=" max-w-screen-lg mx-auto text-white  pt-16 pb-10 ">
           <h2 className=" text-white text-3xl flex items-center ">
             {" "}
             <span className=" border border-[#098A5B] w-16 h-0 mr-4"></span>
@@ -94,18 +96,19 @@ export default function Index() {
           <p className=" text-[#098A5B] mb-10 mt-2">
             WE ARE MORE THAN DIGITAL AGENCY
           </p>
-          <div className=" grid grid-rows-3 grid-flow-col gap-4  ">
+          <div className=" grid justify-between grid-rows-2 grid-cols-2 h-3/4 max-h-full ">
             <img
               src={imagemabout1}
               width="495"
-              height="574"
+              height="500"
               alt="imagem about"
+              className=" row-span-3 max-w-full"
             />
             <img
               src={imagemabout2}
               width="545"
               height="270"
-              alt="imagem about"
+              alt="imagem about w-full mt-10"
             />
             <img
               src={imagemabout3}
@@ -114,6 +117,51 @@ export default function Index() {
               alt="imagem about"
             />
           </div>
+          <div className=" flex justify-center items-center divide-x-2 divide-[#098A5B]">
+            <article className=" mt-14">
+              <strong className=" pb-5">Who we are</strong>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+            </article>
+            <article className=" mt-14 px-9">
+              <strong className=" pb-5">Our Philosophy</strong>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+            </article>
+            <article className=" mt-14 pl-9">
+              <strong className=" pb-5">Who we work</strong>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+            </article>
+          </div>
+          <span className=" flex items-center justify-center mx-auto border border-[#098A5B] h-20 w-0 my-12"></span>
+        </section>
+      </div>
+      <div className=" bg-[#313131]">
+        <section className=" max-w-screen-lg mx-auto text-white  pt-16 pb-10 ">
+          <h2 className=" text-white text-3xl flex items-center ">
+            {" "}
+            <span className=" border border-[#098A5B] w-16 h-0 mr-4"></span>
+            Depoimentos
+          </h2>
+          <p className=" text-[#098A5B] mb-10 mt-2">
+            WE ARE MORE THAN DIGITAL AGENCY
+          </p>
+          {testemonials.map((testemonial, index) => (
+            <CardsDepoimentos
+              key={index}
+              src={testemonial.src}
+              testemonial={testemonial.testemonial}
+              nome={testemonial.nome}
+              cargo={testemonial.cargo}
+            />
+          ))}
         </section>
       </div>
     </>
