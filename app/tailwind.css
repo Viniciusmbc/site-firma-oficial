@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .backgroundImage {
+    background-image: url("https://res.cloudinary.com/deaejawfj/image/upload/v1680785515/Rectangle_3_pavttw.webp");
+    z-index: -99;
+  }
+}
