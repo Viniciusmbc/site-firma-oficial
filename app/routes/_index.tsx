@@ -1,8 +1,6 @@
 import type { V2_MetaFunction } from "@remix-run/node";
-import Typewriter from "typewriter-effect";
 
 // Components
-import CardsHome from "~/components/Cards/CardsHeroSection";
 import CardsServiceSection from "~/components/Cards/CardsServiceSection";
 
 // Images
@@ -35,6 +33,7 @@ export default function Index() {
         <p className=" text-[#098A5B] font-semibold">
           Seu site completo é aqui:
         </p>
+
         <TypeWritterWithHilowEffect />
 
         <button className=" border border-[#098A5B] text-[#098A5B] p-7 my-9">
@@ -82,19 +81,23 @@ export default function Index() {
             <h3 className=" text-white text-3xl flex items-center   ">
               {" "}
               <span className=" border border-[#098A5B] w-16 h-0 mr-4 "></span>
-              Works
+              Área do Cliente
             </h3>
-            <p className=" text-[#098A5B] mb-10 mt-2">OUR THINGS WE"VE MADE</p>
+            <p className=" text-[#098A5B] mb-10 mt-2">
+              ACOMPANHE SEU PROJETO DE UMA FORMA COMO VOCÊ NUNCA VIU
+            </p>
+            <p>
+              Oferecemos uma plataforma exclusiva para acompanhamento em tempo
+              real do desenvolvimento do seu projeto. Na área do cliente, você
+              terá acesso às atualizações do seu protótipo, site e todas as
+              funcionalidades contratadas. Atualizamos diariamente o andamento
+              do seu projeto. Além disso, é possível fazer o download dos
+              conteúdos produzidos para suas redes sociais, revisar e sugerir
+              alterações nos textos e protótipo. Tudo em um único lugar para sua
+              maior comodidade.
+            </p>
           </div>
 
-          <div className=" flex w-full mx-auto justify-center">
-            <img src={imagework1} alt="Work 1" width={252} height={248} />
-            <img src={imagework2} alt="Work 1" width={252} height={248} />
-            <img src={imagework3} alt="Work 1" width={252} height={248} />
-            <img src={imagework4} alt="Work 1" width={252} height={248} />
-            <img src={imagework1} alt="Work 1" width={252} height={248} />
-            <img src={imagework2} alt="Work 1" width={252} height={248} />
-          </div>
           <span className=" flex items-center justify-center mx-auto border border-[#098A5B] h-20 w-0 my-12"></span>
         </section>
       </div>
@@ -106,7 +109,7 @@ export default function Index() {
             Sobre nós
           </h2>
           <p className=" text-[#098A5B] mb-10 mt-2">
-            WE ARE MORE THAN DIGITAL AGENCY
+            QUALIDADE, AGILIDADE E PRATICIDADE
           </p>
           <div className=" grid justify-between grid-rows-2 grid-cols-2 h-full items-center place-items-center ">
             <img
@@ -131,24 +134,39 @@ export default function Index() {
           </div>
           <div className=" flex justify-center items-center divide-x-2 divide-[#098A5B]">
             <article className=" mt-14">
-              <strong className=" pb-5">Who we are</strong>
+              <strong className=" pb-5">Quem somos</strong>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore.
+                A OTC é formada por uma equipe especializada em desenvolvimento
+                web e redação. Gostamos do desafio de desenvolver sites e criar
+                conteúdo para web. Temos um equipe comprometida em oferecer
+                soluções rápidas e de qualidade, para que você possa ter a
+                melhor experiência com a sua presença online. Conte conosco para
+                o desenvolvimento de projetos de sucesso!
               </p>
             </article>
             <article className=" mt-14 px-9">
-              <strong className=" pb-5">Our Philosophy</strong>
+              <strong className=" pb-5">Nossa missão</strong>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore.
+                Fornecer soluções em TI que atendam às necessidades dos nossos
+                clientes e oferecer serviços personalizados de desenvolvimento
+                de sites e criação de conteúdo com excelência, agilidade e
+                eficiência. Buscar sempre inovar e atualizar nossas técnicas
+                para oferecer as melhores soluções em tecnologia.
               </p>
             </article>
             <article className=" mt-14 pl-9">
-              <strong className=" pb-5">Who we work</strong>
+              <strong className=" pb-5">Como trabalhamos</strong>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore.
+                Nosso trabalho é baseado em metodologias ágeis, que visam
+                otimizar os processos de desenvolvimento e entrega de resultados
+                para nossos clientes. Nós entendemos que o mercado está em
+                constante mudança e que é preciso adaptar-se rapidamente. Por
+                isso, utilizamos metodologias que nos permitem ter uma
+                comunicação mais próxima com nossos clientes, além de
+                flexibilidade para se ajustar a qualquer novo desafio. Nossas
+                práticas ágeis nos permitem ser mais eficientes na gestão de
+                projetos, garantindo que os resultados sejam entregues dentro
+                dos prazos estabelecidos e com a qualidade esperada.
               </p>
             </article>
           </div>
@@ -160,10 +178,10 @@ export default function Index() {
           <h2 className=" text-white text-3xl flex items-center ">
             {" "}
             <span className=" border border-[#098A5B] w-16 h-0 mr-4"></span>
-            Depoimentos
+            Pacotes Completos
           </h2>
           <p className=" text-[#098A5B] mb-10 mt-2">
-            WE ARE MORE THAN DIGITAL AGENCY
+            AJUDAMOS VOCÊ A COLOCAR SUA EMPRESA NO MUNDO
           </p>
           <article className=" flex justify-between">
             {testemonials.map((testemonial, index) => (

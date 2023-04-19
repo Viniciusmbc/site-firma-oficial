@@ -5,13 +5,13 @@ module.exports = {
     extend: {
       keyframes: {
         highlight: {
-          "0%": {
+          from: {
             backgroundImage: "linear-gradient(to right, #098A5C, #098A5C)",
-            backgroundPosition: "100% 0",
+            backgroundPosition: "-100% 0",
             backgroundRepeat: "no-repeat",
             backgroundSize: "0 100%",
           },
-          "100%": {
+          to: {
             backgroundImage: "linear-gradient(to right, #098A5C, #098A5C)",
             backgroundPosition: "0 0",
             backgroundRepeat: "no-repeat",
@@ -20,7 +20,7 @@ module.exports = {
         },
       },
       animation: {
-        highlight: "highlight 1s ease-out ",
+        highlight: "highlight .9s ease forwards",
       },
     },
   },
