@@ -7,6 +7,9 @@ import { genericHamburgerLine } from "../common/icons";
 // Remix tools
 import { Link, NavLink } from "@remix-run/react";
 
+// Logo
+import logo from "public/logo.png";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -73,7 +76,15 @@ export default function Navbar() {
           <li>
             <figure className=" pt-1 ml-auto w-fit">
               {" "}
-              <Link to={"/"}>LOGO</Link>
+              <Link to={"/"}>
+                <img
+                  src={logo}
+                  alt="logo"
+                  className="w-[100px]"
+                  width={100}
+                  height={100}
+                />
+              </Link>
             </figure>
           </li>
           {menuItems.map((items, index) => (

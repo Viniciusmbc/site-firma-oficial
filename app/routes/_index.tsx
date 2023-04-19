@@ -1,4 +1,5 @@
 import type { V2_MetaFunction } from "@remix-run/node";
+import Typewriter from "typewriter-effect";
 
 // Components
 import CardsHome from "~/components/Cards/CardsHeroSection";
@@ -14,9 +15,13 @@ import imagemabout2 from "public/about2.png";
 import imagemabout3 from "public/about3.png";
 
 // Services content
-import { services } from "~/utils/services";
-import { testemonials } from "~/utils/testemonials";
+import { services } from "~/data/services";
+import { testemonials } from "~/data/testemonials";
 import CardsDepoimentos from "~/components/Cards/CardsDepoimentos";
+import { textherocards } from "~/data/textherocards";
+import CardsHeroSection from "~/components/Cards/CardsHeroSection";
+
+import TypeWritterWithHilowEffect from "~/components/Effects/TypeWritterWithHilowEffect";
 
 // Meta
 export const meta: V2_MetaFunction = () => {
@@ -27,17 +32,22 @@ export default function Index() {
   return (
     <>
       <section className=" text-white my-24 mx-auto w-full  px-4  max-w-screen-lg">
-        <p className=" text-[#098A5B]">CREATIVE MIND, CREATIVE WORKS.</p>
-        <h1 className=" text-6xl mt-5 max-w-md font-bold">
-          We Are Digital Agency
-        </h1>
+        <p className=" text-[#098A5B] font-semibold">
+          Seu site completo é aqui:
+        </p>
+        <TypeWritterWithHilowEffect />
+
         <button className=" border border-[#098A5B] text-[#098A5B] p-7 my-9">
-          GETTING STARTED
+          Fale Conosco
         </button>
         <div className=" flex justify-between">
-          <CardsHome />
-          <CardsHome />
-          <CardsHome />
+          {textherocards.map((text, index) => (
+            <CardsHeroSection
+              title={text.title}
+              description={text.description}
+              key={index}
+            />
+          ))}
         </div>
       </section>
       <div className=" bg-[#101017]">
@@ -48,9 +58,11 @@ export default function Index() {
           <h2 className=" text-white text-3xl flex items-center ">
             {" "}
             <span className=" border border-[#098A5B] w-16 h-0 mr-4"></span>
-            Services
+            Serviços
           </h2>
-          <p className=" text-[#098A5B] mb-10 mt-2">OUR SERVICES FOR CLIENTS</p>
+          <p className=" text-[#098A5B] mb-10 mt-2  uppercase  font-semibold">
+            Tudo que você precisa para alavancar o seu negócio
+          </p>
           <div className=" grid grid-cols-3 grid-rows-2 gap-8 ">
             {services.map((service, index) => (
               <CardsServiceSection

@@ -1,6 +1,12 @@
-import { aviaopapel } from "../common/icons";
-
-export default function CardsHome() {
+export default function CardsHeroSection({
+  title,
+  description,
+  icon,
+}: {
+  title: string;
+  description: string;
+  icon?: any;
+}) {
   return (
     <article className=" bg-[#313131] max-w-[294px] w-full mb-8">
       <svg
@@ -17,13 +23,10 @@ export default function CardsHome() {
         />
       </svg>
       <div className=" border-b border-[#098A5B] pb-3 pl-4  mt-6">
-        <strong className=" text-xl">Future Concept</strong>
+        <strong className=" text-xl uppercase">{title}</strong>
       </div>
 
-      <p className=" mt-5 pl-4 pb-7">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore.
-      </p>
+      <p className=" mt-5 pl-4 pb-7">{description}</p>
     </article>
   );
 }
