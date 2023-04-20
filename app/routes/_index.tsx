@@ -21,6 +21,7 @@ import CardsHeroSection from "~/components/Cards/CardsHeroSection";
 
 import TypeWritterWithHilowEffect from "~/components/Effects/TypeWritterWithHilowEffect";
 import Mosaic from "~/components/Mosaic/Mosaic";
+import Section from "~/components/Effects/Section";
 
 // Meta
 export const meta: V2_MetaFunction = () => {
@@ -76,32 +77,34 @@ export default function Index() {
           <span className=" flex items-center justify-center mx-auto border border-[#098A5B] h-20 w-0 mt-16"></span>
         </section>
       </div>
-      <div className="bg-[#313131]">
-        <section id="works" className=" pt-16 pb-10 ">
-          <div className="  px-4  w-full   max-w-screen-lg mx-auto mb-20">
-            <h3 className=" text-white text-3xl flex items-center   ">
-              {" "}
-              <span className=" border border-[#098A5B] w-16 h-0 mr-4 "></span>
-              Área do Cliente
-            </h3>
-            <p className=" text-[#098A5B] mb-10 mt-2">
-              ACOMPANHE SEU PROJETO DE UMA FORMA COMO VOCÊ NUNCA VIU
-            </p>
-            <p>
-              Oferecemos uma plataforma exclusiva para acompanhamento em tempo
-              real do desenvolvimento do seu projeto. Na área do cliente, você
-              terá acesso às atualizações do seu protótipo, site e todas as
-              funcionalidades contratadas. Atualizamos diariamente o andamento
-              do seu projeto. Além disso, é possível fazer o download dos
-              conteúdos produzidos para suas redes sociais, revisar e sugerir
-              alterações nos textos e protótipo. Tudo em um único lugar para sua
-              maior comodidade.
-            </p>
-          </div>
+      <Section>
+        <div className="bg-[#313131]">
+          <section id="works" className=" pt-16 pb-10 ">
+            <div className="  px-4  w-full   max-w-screen-lg mx-auto mb-20">
+              <h3 className=" text-white text-3xl flex items-center   ">
+                {" "}
+                <span className=" border border-[#098A5B] w-16 h-0 mr-4 "></span>
+                Área do Cliente
+              </h3>
+              <p className=" text-[#098A5B] mb-10 mt-2">
+                ACOMPANHE SEU PROJETO DE UMA FORMA COMO VOCÊ NUNCA VIU
+              </p>
+              <p>
+                Oferecemos uma plataforma exclusiva para acompanhamento em tempo
+                real do desenvolvimento do seu projeto. Na área do cliente, você
+                terá acesso às atualizações do seu protótipo, site e todas as
+                funcionalidades contratadas. Atualizamos diariamente o andamento
+                do seu projeto. Além disso, é possível fazer o download dos
+                conteúdos produzidos para suas redes sociais, revisar e sugerir
+                alterações nos textos e protótipo. Tudo em um único lugar para
+                sua maior comodidade.
+              </p>
+            </div>
 
-          <span className=" flex items-center justify-center mx-auto border border-[#098A5B] h-20 w-0 my-12"></span>
-        </section>
-      </div>
+            <span className=" flex items-center justify-center mx-auto border border-[#098A5B] h-20 w-0 my-12"></span>
+          </section>
+        </div>
+      </Section>
       <div className=" bg-[#101017]">
         <section className=" max-w-screen-lg mx-auto text-white  pt-16 pb-10 ">
           <h2 className=" text-white text-3xl flex items-center ">

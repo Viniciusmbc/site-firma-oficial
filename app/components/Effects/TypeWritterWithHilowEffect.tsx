@@ -24,7 +24,7 @@ function TypeWritterWithHilowEffect() {
               })
               .pauseFor(2500)
               .deleteAll()
-              .typeString("<div id='highlight-wrapper'><h1>redação.</h1></div>")
+              .typeString("<div id='highlight-wrapper'><h1>texto.</h1></div>")
               .callFunction(() => {
                 const highlightWrapper =
                   document.getElementById("highlight-wrapper");
