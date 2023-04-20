@@ -20,6 +20,7 @@ import { textherocards } from "~/data/textherocards";
 import CardsHeroSection from "~/components/Cards/CardsHeroSection";
 
 import TypeWritterWithHilowEffect from "~/components/Effects/TypeWritterWithHilowEffect";
+import Mosaic from "~/components/Mosaic/Mosaic";
 
 // Meta
 export const meta: V2_MetaFunction = () => {
@@ -202,6 +203,9 @@ export default function Index() {
           <p className=" text-[#098A5B]">CHECK OUT SOME OF OUR NEWS</p>
         </section>
       </div>
+      <section className=" flex">
+        <Mosaic />
+      </section>
     </>
   );
 }

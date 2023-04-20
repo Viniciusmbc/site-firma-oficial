@@ -7,23 +7,4 @@
     background-image: url("https://res.cloudinary.com/deaejawfj/image/upload/v1680785515/Rectangle_3_pavttw.webp");
     z-index: -99;
   }
-
-  .test {
-    position: relative;
-  }
-  .test:after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Place the pseudo element right under the content */
-    top: 0;
-    left: 0;
-    background: linear-gradient(to top, red 50%, transparent 50%);
-    animation-name: highlight;
-    animation-duration: 0.75s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate; /* Make the animation run back and forth */
-  }
 }
