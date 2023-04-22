@@ -11,8 +11,8 @@ const TextAnimationEntry = ({ children }: TextAnimationEntryProps) => {
 
   return (
     <div ref={ref}>
-      <h2
-        className=" -translate-x-28"
+      <div
+        className=" -translate-x-28  text-white text-3xl flex items-center "
         style={{
           transform: isInView ? "none" : "translateX(-500px)",
           opacity: isInView ? 1 : 0,
@@ -20,7 +20,7 @@ const TextAnimationEntry = ({ children }: TextAnimationEntryProps) => {
         }}
       >
         {children}
-      </h2>
+      </div>
     </div>
   );
 };

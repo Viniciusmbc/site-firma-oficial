@@ -4,10 +4,6 @@ import type { V2_MetaFunction } from "@remix-run/node";
 import CardsServiceSection from "~/components/Cards/CardsServiceSection";
 
 // Images
-import imagework1 from "public/imagemwork1.png";
-import imagework2 from "public/imagemwork2.png";
-import imagework3 from "public/imagemwork3.png";
-import imagework4 from "public/imagemwork4.png";
 import imagemabout1 from "public/about1.png";
 import imagemabout2 from "public/about2.png";
 import imagemabout3 from "public/about3.png";
@@ -18,10 +14,17 @@ import { testemonials } from "~/data/testemonials";
 import CardsDepoimentos from "~/components/Cards/CardsDepoimentos";
 import { textherocards } from "~/data/textherocards";
 import CardsHeroSection from "~/components/Cards/CardsHeroSection";
+import TypeWritterWithHilowEffect from "~/components/TypeWritterEffect/molecules/TypeWritterWithHilowEffect";
+import TextAnimationEntry from "~/components/TextAnimationEntry/TextAnimationEntry";
 
-import TypeWritterWithHilowEffect from "~/components/Effects/TypeWritterWithHilowEffect";
-import Mosaic from "~/components/Mosaic/Mosaic";
-import Section from "~/components/Effects/Section";
+import ImageGallery from "~/components/Mosaic/ImageGallery";
+
+import image2 from "public/2.png";
+import image3 from "public/3.png";
+import image4 from "public/4.png";
+import image5 from "public/5.png";
+import image6 from "public/6.png";
+import PencilWriting from "~/components/PencilWriting/PencilWriting";
 
 // Meta
 export const meta: V2_MetaFunction = () => {
@@ -29,6 +32,17 @@ export const meta: V2_MetaFunction = () => {
 };
 
 export default function Index() {
+  const images = [
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image2,
+    image3,
+    image4,
+  ];
+
   return (
     <>
       <section className=" text-white my-24 mx-auto w-full  px-4  max-w-screen-lg">
@@ -49,6 +63,19 @@ export default function Index() {
               key={index}
             />
           ))}
+          <article className=" bg-[#313131] max-w-[294px] w-full mb-8">
+            <div className=" border-b border-[#098A5B] pb-3 pl-4  mt-6">
+              <PencilWriting />
+              <strong className=" text-xl uppercase">Redaçao</strong>
+            </div>
+
+            <p className=" mt-5 pl-4 pb-7">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              itaque error doloribus iure officia aliquid voluptatum, porro est
+              nisi corporis nam impedit reprehenderit, dolor quaerat a quam
+              provident. Deleniti, debitis?
+            </p>
+          </article>
         </div>
       </section>
       <div className=" bg-[#101017]">
@@ -56,11 +83,14 @@ export default function Index() {
           id="services"
           className="  w-full  py-32  px-4  max-w-screen-lg mx-auto"
         >
-          <h2 className=" text-white text-3xl flex items-center ">
-            {" "}
-            <span className=" border border-[#098A5B] w-16 h-0 mr-4"></span>
-            Serviços
-          </h2>
+          <TextAnimationEntry>
+            <h2 className=" text-white text-3xl flex items-center ">
+              {" "}
+              <span className=" border border-[#098A5B] w-16 h-0 mr-4"></span>
+              Serviços
+            </h2>
+          </TextAnimationEntry>
+
           <p className=" text-[#098A5B] mb-10 mt-2  uppercase  font-semibold">
             Tudo que você precisa para alavancar o seu negócio
           </p>
@@ -77,15 +107,14 @@ export default function Index() {
           <span className=" flex items-center justify-center mx-auto border border-[#098A5B] h-20 w-0 mt-16"></span>
         </section>
       </div>
-      <Section>
+      <section>
         <div className="bg-[#313131]">
           <section id="works" className=" pt-16 pb-10 ">
             <div className="  px-4  w-full   max-w-screen-lg mx-auto mb-20">
-              <h3 className=" text-white text-3xl flex items-center   ">
-                {" "}
-                <span className=" border border-[#098A5B] w-16 h-0 mr-4 "></span>
+              <TextAnimationEntry>
+                <span className=" border border-[#098A5B] w-16 h-0 mr-4"></span>
                 Área do Cliente
-              </h3>
+              </TextAnimationEntry>{" "}
               <p className=" text-[#098A5B] mb-10 mt-2">
                 ACOMPANHE SEU PROJETO DE UMA FORMA COMO VOCÊ NUNCA VIU
               </p>
@@ -104,7 +133,7 @@ export default function Index() {
             <span className=" flex items-center justify-center mx-auto border border-[#098A5B] h-20 w-0 my-12"></span>
           </section>
         </div>
-      </Section>
+      </section>
       <div className=" bg-[#101017]">
         <section className=" max-w-screen-lg mx-auto text-white  pt-16 pb-10 ">
           <h2 className=" text-white text-3xl flex items-center ">
@@ -206,8 +235,9 @@ export default function Index() {
           <p className=" text-[#098A5B]">CHECK OUT SOME OF OUR NEWS</p>
         </section>
       </div>
-      <section className=" flex">
-        <Mosaic />
+
+      <section>
+        <ImageGallery images={images} />
       </section>
     </>
   );

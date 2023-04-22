@@ -11,6 +11,7 @@ import type { LinksFunction } from "@remix-run/node";
 
 import styles from "./tailwind.css";
 import Navbar from "~/components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
@@ -27,11 +28,12 @@ export default function App() {
       <body>
         <div className="backgroundImage">
           <Navbar />
-          <main>
+
+          <main className=" max-w-[100vw] overflow-x-hidden">
             <Outlet />
           </main>
         </div>
-
+        <Footer />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
