@@ -2,31 +2,27 @@ import type { V2_MetaFunction } from "@remix-run/node";
 
 // Components
 import CardsServiceSection from "~/components/Cards/CardsServiceSection";
+import CardsDepoimentos from "~/components/Cards/CardsDepoimentos";
+import CardsHeroSection from "~/components/Cards/CardsHeroSection";
+import TypeWritterWithHilowEffect from "~/components/TypeWritterEffect/molecules/TypeWritterWithHilowEffect";
+import TextAnimationEntry from "~/components/TextAnimationEntry/TextAnimationEntry";
+import ImageGallery from "~/components/Mosaic/ImageGallery";
+import PencilWriting from "~/components/PencilWriting/PencilWriting";
 
 // Images
 import imagemabout1 from "public/about1.png";
 import imagemabout2 from "public/about2.png";
 import imagemabout3 from "public/about3.png";
-
-// Services content
-import { services } from "~/data/services";
-import { testemonials } from "~/data/testemonials";
-import CardsDepoimentos from "~/components/Cards/CardsDepoimentos";
-import { textherocards } from "~/data/textherocards";
-import CardsHeroSection from "~/components/Cards/CardsHeroSection";
-import TypeWritterWithHilowEffect from "~/components/TypeWritterEffect/molecules/TypeWritterWithHilowEffect";
-import TextAnimationEntry from "~/components/TextAnimationEntry/TextAnimationEntry";
-
-import ImageGallery from "~/components/Mosaic/ImageGallery";
-
 import image2 from "public/2.png";
 import image3 from "public/3.png";
 import image4 from "public/4.png";
 import image5 from "public/5.png";
 import image6 from "public/6.png";
-import PencilWriting from "~/components/PencilWriting/PencilWriting";
-import LogoAnimation from "~/components/Logo/LogoAnimation";
-import Planet from "~/components/Logo/LogoAnimation";
+
+// Data
+import { services } from "~/data/services";
+import { testemonials } from "~/data/testemonials";
+import { textherocards } from "~/data/textherocards";
 
 // Meta
 export const meta: V2_MetaFunction = () => {
@@ -65,19 +61,6 @@ export default function Index() {
               key={index}
             />
           ))}
-          <article className=" bg-[#313131] max-w-[294px] w-full mb-8">
-            <div className=" border-b border-[#098A5B] pb-3 pl-4  mt-6">
-              <PencilWriting />
-              <strong className=" text-xl uppercase">Redaçao</strong>
-            </div>
-
-            <p className=" mt-5 pl-4 pb-7">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-              itaque error doloribus iure officia aliquid voluptatum, porro est
-              nisi corporis nam impedit reprehenderit, dolor quaerat a quam
-              provident. Deleniti, debitis?
-            </p>
-          </article>
         </div>
       </section>
       <div className=" bg-[#101017]">
@@ -93,7 +76,6 @@ export default function Index() {
             </h2>
           </TextAnimationEntry>
 
-          <Planet />
           <p className=" text-[#098A5B] mb-10 mt-2  uppercase  font-semibold">
             Tudo que você precisa para alavancar o seu negócio
           </p>

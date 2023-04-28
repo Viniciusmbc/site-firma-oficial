@@ -5,6 +5,7 @@ import lua2 from "public/logo/lua2.png";
 import lua3 from "public/logo/lua3.png";
 import lua4 from "public/logo/lua3.png";
 import lua5 from "public/logo/lua3.png";
+import brainImage from "public/logo/brainImage.png";
 
 const Planet = () => {
   return (
@@ -14,13 +15,20 @@ const Planet = () => {
         animate={{ rotate: 360 }}
         transition={{ duration: 10, repeat: Infinity }}
       >
-        <img src={planeta} alt="Planeta" className="w-full" />
+        <img src={planeta} alt="Planeta" className="w-full h-full" />
+        <img
+          src={brainImage}
+          alt="Brain"
+          className="absolute inset-x-0 inset-y-0 w-full h-full z-10"
+        />
         <motion.img
           src={lua1}
+          width={200}
+          height={200}
           alt="Lua 1"
           className="absolute top-1/2 left-1/2 w-24 h-24"
           animate={{
-            y: [-100, 100, -100],
+            y: [-100, 100, -200],
           }}
           transition={{
             duration: 4,

@@ -9,6 +9,7 @@ import { Link, NavLink } from "@remix-run/react";
 
 // Logo
 import logo from "public/1.png";
+import Planet from "../Logo/LogoAnimation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,13 +78,7 @@ export default function Navbar() {
             <figure className=" pt-1 ml-auto w-fit">
               {" "}
               <Link to={"/"}>
-                <img
-                  src={logo}
-                  alt="logo"
-                  className="w-[100px]"
-                  width={100}
-                  height={100}
-                />
+                <Planet />
               </Link>
             </figure>
           </li>
