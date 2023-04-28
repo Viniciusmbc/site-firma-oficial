@@ -14,6 +14,7 @@ const Planet = () => {
         className="relative  w-52 h-52 rounded-full bg-gradient-to from-yellow-400 to-red-500 flex justify-center items-center"
         animate={{ rotate: 360 }}
         transition={{ duration: 10, repeat: Infinity }}
+        style={{ perspective: "500px" }} // Adiciona o ponto de perspectiva
       >
         <img src={planeta} alt="Planeta" className="w-full h-full" />
         <img
@@ -26,7 +27,7 @@ const Planet = () => {
           width={200}
           height={200}
           alt="Lua 1"
-          className="absolute top-1/2 left-1/2 w-24 h-24"
+          className="absolute top-1/2 left-1/2 w-fit h-fit max-w-full"
           animate={{
             y: [-100, 100, -200],
           }}
@@ -67,7 +68,7 @@ const Planet = () => {
           alt="Lua 4"
           className="absolute top-1/2 left-1/2 w-20 h-20 -z-20"
           animate={{
-            y: [150, -150, 150],
+            y: [-120, 120, -120],
           }}
           transition={{
             duration: 12,

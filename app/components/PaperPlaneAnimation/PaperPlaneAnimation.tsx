@@ -6,7 +6,7 @@ interface Position {
   y: number;
 }
 
-const PaperPlane = () => {
+const PaperPlaneAnimation = () => {
   const [position, setPosition] = useState<Position>({ x: 0, y: 0 });
 
   return (
@@ -80,4 +80,4 @@ const PaperPlane = () => {
   );
 };
 
-export default PaperPlane;
+export default PaperPlaneAnimation;

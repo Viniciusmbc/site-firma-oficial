@@ -7,7 +7,6 @@ import CardsHeroSection from "~/components/Cards/CardsHeroSection";
 import TypeWritterWithHilowEffect from "~/components/TypeWritterEffect/molecules/TypeWritterWithHilowEffect";
 import TextAnimationEntry from "~/components/TextAnimationEntry/TextAnimationEntry";
 import ImageGallery from "~/components/Mosaic/ImageGallery";
-import PencilWriting from "~/components/PencilWriting/PencilWriting";
 
 // Images
 import imagemabout1 from "public/about1.png";
@@ -23,6 +22,7 @@ import image6 from "public/6.png";
 import { services } from "~/data/services";
 import { testemonials } from "~/data/testemonials";
 import { textherocards } from "~/data/textherocards";
+import { motion } from "framer-motion";
 
 // Meta
 export const meta: V2_MetaFunction = () => {
@@ -59,6 +59,7 @@ export default function Index() {
               title={text.title}
               description={text.description}
               key={index}
+              icon={text.icon}
             />
           ))}
         </div>
