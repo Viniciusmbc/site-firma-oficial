@@ -1,4 +1,4 @@
-import PaperPlane from "../PaperPlaneAnimation/PaperPlane";
+import PaperPlane from "../PaperPlaneAnimation/PaperPlaneAnimation";
 
 export default function CardsHeroSection({
   title,
@@ -7,11 +7,11 @@ export default function CardsHeroSection({
 }: {
   title: string;
   description: string;
-  icon?: any;
+  icon: JSX.Element;
 }) {
   return (
     <article className=" bg-[#313131] max-w-[294px] w-full mb-8">
-      <PaperPlane />
+      {icon}
       <div className=" border-b border-[#098A5B] pb-3 pl-4  mt-6">
         <strong className=" text-xl uppercase">{title}</strong>
       </div>
