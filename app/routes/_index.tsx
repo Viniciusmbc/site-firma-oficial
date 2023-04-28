@@ -25,6 +25,8 @@ import image4 from "public/4.png";
 import image5 from "public/5.png";
 import image6 from "public/6.png";
 import PencilWriting from "~/components/PencilWriting/PencilWriting";
+import LogoAnimation from "~/components/Logo/LogoAnimation";
+import Planet from "~/components/Logo/LogoAnimation";
 
 // Meta
 export const meta: V2_MetaFunction = () => {
@@ -91,6 +93,7 @@ export default function Index() {
             </h2>
           </TextAnimationEntry>
 
+          <Planet />
           <p className=" text-[#098A5B] mb-10 mt-2  uppercase  font-semibold">
             Tudo que você precisa para alavancar o seu negócio
           </p>

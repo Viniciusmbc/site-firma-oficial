@@ -8,7 +8,7 @@ import { genericHamburgerLine } from "../common/icons";
 import { Link, NavLink } from "@remix-run/react";
 
 // Logo
-import logo from "public/logo.png";
+import logo from "public/1.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
