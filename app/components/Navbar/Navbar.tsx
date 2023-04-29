@@ -75,12 +75,8 @@ export default function Navbar() {
       <nav className=" hidden border-black  border-b-black  mx-auto w-[100vw] max-w-screen-lg pt-2  px-7 md:block">
         <ul className="z-50 mt-3 flex justify-between items-center">
           <li>
-            <figure className=" pt-1 ml-auto w-fit">
-              {" "}
-              <Link to={"/"}>
-                <Planet />
-              </Link>
-            </figure>
+            {" "}
+            <Planet />
           </li>
           {menuItems.map((items, index) => (
             <li key={index}>

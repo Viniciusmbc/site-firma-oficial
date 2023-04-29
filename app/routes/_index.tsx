@@ -23,6 +23,7 @@ import { services } from "~/data/services";
 import { testemonials } from "~/data/testemonials";
 import { textherocards } from "~/data/textherocards";
 import { motion } from "framer-motion";
+import WritingAnimation from "~/components/Pencil/Pencil";
 
 // Meta
 export const meta: V2_MetaFunction = () => {
@@ -53,6 +54,7 @@ export default function Index() {
         <button className=" border border-[#098A5B] text-[#098A5B] p-7 my-9">
           Fale Conosco
         </button>
+
         <div className=" flex justify-between">
           {textherocards.map((text, index) => (
             <CardsHeroSection

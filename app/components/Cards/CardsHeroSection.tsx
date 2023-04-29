@@ -1,5 +1,3 @@
-import PaperPlane from "../PaperPlaneAnimation/PaperPlaneAnimation";
-
 export default function CardsHeroSection({
   title,
   description,

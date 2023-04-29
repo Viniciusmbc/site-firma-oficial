@@ -1,9 +1,7 @@
-import mediapaintimg from "public/mediapaintimg.png";
+import Gauge from "~/components/Gauge/Gauge";
 import PaperPlaneAnimation from "~/components/PaperPlaneAnimation/PaperPlaneAnimation";
-import Speedometer from "~/components/SpeedIcon/SpeedIcon";
-import Velocimeter from "~/components/SpeedIcon/SpeedIcon";
-
-import SpeedIcon from "~/components/SpeedIcon/SpeedIcon";
+import WritingAnimation from "~/components/Pencil/Pencil";
+import Pencil from "~/components/Pencil/Pencil";
 
 interface Textherocard {
   icon: any;
@@ -19,13 +17,13 @@ export const textherocards: Textherocard[] = [
       "Nós estamos prontos para transformar sua ideia em realidade, com um serviço completo e personalizado que atende às suas necessidades.",
   },
   {
-    icon: <Speedometer value={180} />,
-    title: "Sem mensalidade",
+    icon: <Gauge />,
+    title: "Sites Rápidos e Responsivos",
     description:
-      "Aqui você só paga uma vez: oferecemos, como bônus, a manutenção e o relatório mensal de desempenho do seu site.",
+      "Melhore a satisfação do usuário e aumente a sua taxa de conversão, pois os visitantes tendem a permanecer por mais tempo e navegar por mais páginas em um site que é rápido e fácil de usar.",
   },
   {
-    icon: <img src={mediapaintimg} width={100} height={100} alt="imagem" />,
+    icon: <WritingAnimation />,
     title: "Redação",
     description:
       "Fornecemos soluções de criação de conteúdo que não apenas atrairão mais acessos, mas também manterão o público envolvido e interessado em seu negócio. ",

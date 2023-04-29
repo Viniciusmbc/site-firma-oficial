@@ -4,6 +4,31 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
+        writing: {
+          "0%": {
+            opacity: 0,
+            transform: "translateX(-20px)",
+          },
+          "50%": {
+            opacity: 1,
+            transform: "translateX(0)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateX(0)",
+          },
+        },
+        rotate: {
+          to: {
+            backgroundPosition: "-200% 0",
+          },
+        },
+        orbit: {
+          "49%": { zIndex: 1 },
+          "50%": { left: "25em", zIndex: -1 },
+          "99%": { zIndex: -1 },
+          "100%": { left: "-11em", zIndex: 1 },
+        },
         mosaic: {
           from: {
             opacity: 0,
@@ -29,6 +54,9 @@ module.exports = {
       animation: {
         highlight: "highlight .9s ease forwards",
         mosaic: "mosaic 1s forwards",
+        rotate: "rotate 10s linear infinite",
+        orbit: "orbit 20s infinite ease-in-out",
+        writing: "writing 5s linear forwards",
       },
     },
   },

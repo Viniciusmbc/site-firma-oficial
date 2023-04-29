@@ -3,7 +3,7 @@ import designconceptimg from "public/designconceptimg.png";
 import digitalestrategyimg from "public/digitalestrategyimg.png";
 import mediapaintimg from "public/mediapaintimg.png";
 import socialmediaimg from "public/socialmediaimg.png";
-import uxdesignimg from "public/uxdesignimg.png";
+import pencilimg from "public/pencilimg.png";
 
 export const services = [
   {
@@ -13,7 +13,7 @@ export const services = [
       "Tenha um website responsivo e altamente eficaz na conversão de visitantes em clientes com nossa equipe de especialistas em desenvolvimento web.",
   },
   {
-    src: uxdesignimg,
+    src: pencilimg,
     title: "Redação",
     description:
       "Aprimore a visibilidade do seu site e redes sociais com conteúdo de qualidade, produzido por uma equipe de profissionais altamente experientes.",
