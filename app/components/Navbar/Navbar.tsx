@@ -8,16 +8,15 @@ import { genericHamburgerLine } from "../common/icons";
 import { Link, NavLink } from "@remix-run/react";
 
 // Logo
-import logo from "public/1.png";
-import Planet from "../Logo/LogoAnimation";
+import LogoAnimation from "../Logo/LogoAnimation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const menuItems: string[] = ["Home", "Serviços", "Work", "Sobre nós", "Blog"];
+  const menuItems: string[] = ["Home", "Serviços", "Sobre nós", "Blog"];
 
   return (
-    <header className=" text-white  z-50  ">
+    <header className=" text-white  z-50 text-lg  ">
       <nav className="px-4  border-b-2 border-black  md:hidden">
         <>
           <button
@@ -47,7 +46,7 @@ export default function Navbar() {
           </button>
           <figure className=" pt-1 ml-auto w-fit md:hidden">
             {" "}
-            <Link to={"/"}>LOGO</Link>
+            <LogoAnimation />
           </figure>
         </>
         <div
@@ -76,7 +75,7 @@ export default function Navbar() {
         <ul className="z-50 mt-3 flex justify-between items-center">
           <li>
             {" "}
-            <Planet />
+            <LogoAnimation />
           </li>
           {menuItems.map((items, index) => (
             <li key={index}>
@@ -97,21 +96,26 @@ export default function Navbar() {
           <li>
             <NavLink to="#contato">Contato</NavLink>
           </li>
-          <li>
-            <svg
-              width="21"
-              height="21"
-              viewBox="0 0 21 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+          <li className=" border border-[#098A5C] flex">
+            <Link
+              className=" flex gap-x-2 p-3 items-center justify-center"
+              to={"area-do-cliente"}
             >
-              <path
-                d="M20 20L15.514 15.506M18 9.5C18 11.7543 17.1045 13.9163 15.5104 15.5104C13.9163 17.1045 11.7543 18 9.5 18C7.24566 18 5.08365 17.1045 3.48959 15.5104C1.89553 13.9163 1 11.7543 1 9.5C1 7.24566 1.89553 5.08365 3.48959 3.48959C5.08365 1.89553 7.24566 1 9.5 1C11.7543 1 13.9163 1.89553 15.5104 3.48959C17.1045 5.08365 18 7.24566 18 9.5V9.5Z"
-                stroke="#098A5B"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
+              Área do cliente
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 9.375C8 4.36696 11.2489 0.5 15 0.5C18.7511 0.5 22 4.36696 22 9.375C22 14.383 18.7511 18.25 15 18.25C11.2489 18.25 8 14.383 8 9.375ZM0.5 26.25C0.5 22.5501 3.35037 19.5529 6.95308 19.2643C9.04182 21.536 11.8787 23 15 23C18.1213 23 20.9583 21.5359 23.0471 19.2641C26.6828 19.5516 29.5 22.5476 29.5 26.25V29.5H0.5V26.25Z"
+                  fill="#098A5C"
+                  stroke="black"
+                />
+              </svg>
+            </Link>
           </li>
         </ul>
       </nav>

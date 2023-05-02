@@ -22,8 +22,6 @@ import image6 from "public/6.png";
 import { services } from "~/data/services";
 import { testemonials } from "~/data/testemonials";
 import { textherocards } from "~/data/textherocards";
-import { motion } from "framer-motion";
-import WritingAnimation from "~/components/Pencil/Pencil";
 
 // Meta
 export const meta: V2_MetaFunction = () => {
@@ -89,6 +87,7 @@ export default function Index() {
                 src={service.src}
                 title={service.title}
                 description={service.description}
+                index={index}
               />
             ))}
           </div>

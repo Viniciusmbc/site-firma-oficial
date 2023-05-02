@@ -16,7 +16,7 @@ const PaperPlaneAnimation = () => {
         y: -500,
         rotate: 380,
         transition: {
-          duration: 3,
+          duration: 5,
           ease: "easeInOut",
         },
       }}
@@ -26,8 +26,8 @@ const PaperPlaneAnimation = () => {
       style={{ x: position.x, y: position.y }}
     >
       <motion.svg
-        width="58"
-        height="58"
+        width="60"
+        height="60"
         viewBox="0 0 58 58"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -39,9 +39,9 @@ const PaperPlaneAnimation = () => {
           animate={{
             rotate: [0, 50, 360],
             transition: {
-              duration: 1,
+              duration: 9,
               ease: "linear",
-              times: [6, 6, 1],
+              times: [3, 9, 1],
             },
           }}
         />
@@ -64,12 +64,12 @@ const PaperPlaneAnimation = () => {
             rotate: 200,
 
             transition: {
-              duration: 20,
+              duration: 50,
               ease: "easeInOut",
             },
           }}
           transition={{
-            duration: 3,
+            duration: 6,
             ease: "easeInOut",
             delay: i * 5,
             repeatDelay: 5,

@@ -4,18 +4,31 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        writing: {
-          "0%": {
-            opacity: 0,
-            transform: "translateX(-20px)",
+        write: {
+          from: {
+            bottom: "9.5rem",
           },
           "50%": {
-            opacity: 1,
-            transform: "translateX(0)",
+            bottom: "10.5rem",
+          },
+          to: {
+            bottom: "9rem",
+          },
+        },
+        leftwrite: {
+          from: {
+            left: "0rem",
           },
           "100%": {
-            opacity: 1,
-            transform: "translateX(0)",
+            left: "13rem",
+          },
+        },
+        writing: {
+          from: {
+            width: "1rem",
+          },
+          "100%": {
+            width: "23rem",
           },
         },
         rotate: {
@@ -53,10 +66,12 @@ module.exports = {
       },
       animation: {
         highlight: "highlight .9s ease forwards",
-        mosaic: "mosaic 1s forwards",
+        mosaic: "mosaic .7s forwards",
         rotate: "rotate 10s linear infinite",
         orbit: "orbit 20s infinite ease-in-out",
-        writing: "writing 5s linear forwards",
+        write:
+          "write 0.6s ease-in-out infinite, leftwrite 6s ease-in-out infinite",
+        writing: "writing 6s ease-in-out infinite",
       },
     },
   },
