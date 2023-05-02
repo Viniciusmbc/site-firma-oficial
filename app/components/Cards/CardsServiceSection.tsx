@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 interface CardsServiceSectionProps {
   src: string;
@@ -14,11 +15,15 @@ export default function CardsServiceSection({
 }: CardsServiceSectionProps & { index: number }) {
   const delay = index * 0.5;
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <motion.article
+      ref={ref}
       className=" text-white bg-[#313131]  border-b-4 border-[#D9D9D9] w-full max-w-[341px]"
       initial={{ y: 50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
+      animate={isInView ? { y: 0, opacity: 1 } : {}}
       transition={{ duration: 0.5, delay }}
     >
       <img
@@ -28,7 +33,9 @@ export default function CardsServiceSection({
         height="44"
         className=" mt-12 mb-10 ml-7"
       />
-      <strong className=" text-3xl ml-7 mt-10 mb-5 ">{title}</strong>
+      <strong className=" text-3xl mx-auto ml-7 flex  mt-10 mb-5 max-w-full  ">
+        {title}
+      </strong>
       <p className=" mb-14 ml-7 mt-5">{description}</p>
     </motion.article>
   );

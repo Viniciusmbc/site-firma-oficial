@@ -26,7 +26,7 @@ export default function App() {
       </head>
 
       <body>
-        <div className="backgroundImage">
+        <div className=" bg-[url(https://res.cloudinary.com/deaejawfj/image/upload/v1680785515/Rectangle_3_pavttw.webp)] bg-cover bg-center">
           <Navbar />
 
           <main className=" max-w-[100vw] overflow-x-hidden">

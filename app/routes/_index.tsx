@@ -22,6 +22,9 @@ import image6 from "public/6.png";
 import { services } from "~/data/services";
 import { testemonials } from "~/data/testemonials";
 import { textherocards } from "~/data/textherocards";
+import LogoAnimation from "~/components/Logo/LogoAnimation";
+import SolarSystem from "~/components/Solar/SolarSystem";
+import LogoAnimation2 from "~/components/Logo/LogoAnimation2";
 
 // Meta
 export const meta: V2_MetaFunction = () => {
@@ -121,6 +124,7 @@ export default function Index() {
           </section>
         </div>
       </section>
+      <LogoAnimation />
       <div className=" bg-[#101017]">
         <section className=" max-w-screen-lg mx-auto text-white  pt-16 pb-10 ">
           <h2 className=" text-white text-3xl flex items-center ">
@@ -156,12 +160,15 @@ export default function Index() {
             <article className=" mt-14">
               <strong className=" pb-5">Quem somos</strong>
               <p>
-                A OTC é formada por uma equipe especializada em desenvolvimento
-                web e redação. Gostamos do desafio de desenvolver sites e criar
-                conteúdo para web. Temos um equipe comprometida em oferecer
-                soluções rápidas e de qualidade, para que você possa ter a
-                melhor experiência com a sua presença online. Conte conosco para
-                o desenvolvimento de projetos de sucesso!
+                A OTC é uma empresa especializada em desenvolvimento web e
+                redação de conteúdo. A nossa equipe adora o desafio de
+                desenvolver sites e criar conteúdo para a web. Somos
+                comprometidos em oferecer soluções rápidas e de qualidade para
+                que você possa ter a melhor experiência com a sua presença
+                online. Se você precisa de uma empresa de desenvolvimento de
+                websites confiável, a OTC é a escolha certa. Entre em contato
+                conosco hoje mesmo para saber mais sobre os nossos serviços e
+                como podemos ajudar a impulsionar a sua presença online.
               </p>
             </article>
             <article className=" mt-14 px-9">
@@ -177,22 +184,21 @@ export default function Index() {
             <article className=" mt-14 pl-9">
               <strong className=" pb-5">Como trabalhamos</strong>
               <p>
-                Nosso trabalho é baseado em metodologias ágeis, que visam
-                otimizar os processos de desenvolvimento e entrega de resultados
-                para nossos clientes. Nós entendemos que o mercado está em
-                constante mudança e que é preciso adaptar-se rapidamente. Por
-                isso, utilizamos metodologias que nos permitem ter uma
-                comunicação mais próxima com nossos clientes, além de
-                flexibilidade para se ajustar a qualquer novo desafio. Nossas
-                práticas ágeis nos permitem ser mais eficientes na gestão de
-                projetos, garantindo que os resultados sejam entregues dentro
-                dos prazos estabelecidos e com a qualidade esperada.
+                A nossa empresa adota metodologias ágeis para proporcionar
+                otimização no desenvolvimento e entrega de resultados aos nossos
+                clientes. Com comunicação próxima e flexibilidade, somos capazes
+                de nos adaptar rapidamente às mudanças do mercado e enfrentar
+                novos desafios. Essas práticas ágeis são fundamentais para
+                garantir a eficiência na gestão de projetos, permitindo que os
+                resultados sejam entregues com qualidade e dentro dos prazos
+                estabelecidos.
               </p>
             </article>
           </div>
           <span className=" flex items-center justify-center mx-auto border border-[#098A5B] h-20 w-0 my-12"></span>
         </section>
       </div>
+      <LogoAnimation2 />
       <div className=" bg-[#313131]">
         <section className=" max-w-screen-lg mx-auto text-white  pt-16 pb-10 ">
           <h2 className=" text-white text-3xl flex items-center ">
