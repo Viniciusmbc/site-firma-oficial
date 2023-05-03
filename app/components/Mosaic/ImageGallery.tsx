@@ -62,7 +62,7 @@ const ImageGallery = ({ images }: { images: any }) => {
         <p className=" text-[#098A5B] mb-10 mt-2">
           AJUDAMOS VOCÊ A COLOCAR SUA EMPRESA NO MUNDO
         </p>
-        <p>Do zero ao sucesso online.</p>
+        <strong className="  font-bold">Do zero ao sucesso online.</strong>
         <div>
           <ul className=" list-inside list-disc">
             <li>Criamos o design do seu site ecommerce</li>
