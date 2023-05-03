@@ -23,8 +23,6 @@ import { services } from "~/data/services";
 import { testemonials } from "~/data/testemonials";
 import { textherocards } from "~/data/textherocards";
 import LogoAnimation from "~/components/Logo/LogoAnimation";
-import SolarSystem from "~/components/Solar/SolarSystem";
-import LogoAnimation2 from "~/components/Logo/LogoAnimation2";
 
 // Meta
 export const meta: V2_MetaFunction = () => {
@@ -198,7 +196,7 @@ export default function Index() {
           <span className=" flex items-center justify-center mx-auto border border-[#098A5B] h-20 w-0 my-12"></span>
         </section>
       </div>
-      <LogoAnimation2 />
+      <LogoAnimation />
       <div className=" bg-[#313131]">
         <section className=" max-w-screen-lg mx-auto text-white  pt-16 pb-10 ">
           <h2 className=" text-white text-3xl flex items-center ">

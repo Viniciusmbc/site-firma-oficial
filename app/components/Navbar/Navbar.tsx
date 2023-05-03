@@ -6,9 +6,9 @@ import { genericHamburgerLine } from "../common/icons";
 
 // Remix tools
 import { Link, NavLink } from "@remix-run/react";
+import LogoAnimation from "../Logo/LogoAnimation";
 
 // Logo
-import LogoAnimation from "../Logo/LogoAnimation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
