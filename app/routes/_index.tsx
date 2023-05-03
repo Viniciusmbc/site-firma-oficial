@@ -43,45 +43,18 @@ export default function Index() {
 
   return (
     <>
-      <section className=" text-white my-24 mx-auto w-full  px-4  max-w-screen-lg">
-        <p className=" text-[#098A5B] font-semibold">
-          Seu site completo é aqui:
-        </p>
-
-        <TypeWritterWithHilowEffect />
-
-        <button className=" border border-[#098A5B] text-[#098A5B] p-7 my-9">
-          Fale Conosco
-        </button>
-
-        <div className=" flex justify-between">
-          {textherocards.map((text, index) => (
-            <CardsHeroSection
-              title={text.title}
-              description={text.description}
-              key={index}
-              icon={text.icon}
-            />
-          ))}
-        </div>
-      </section>
       <div className=" bg-[#101017]">
         <section
           id="services"
           className="  w-full  py-32  px-4  max-w-screen-lg mx-auto"
         >
-          <TextAnimationEntry>
-            <h2 className=" text-white text-3xl flex items-center ">
-              {" "}
-              <span className=" border border-[#098A5B] w-16 h-0 mr-4"></span>
-              Serviços
-            </h2>
-          </TextAnimationEntry>
+          <TextAnimationEntry
+            title={"Serviços"}
+            description={"Tudo que você precisa para alavancar o seu negócio"}
+          />
 
-          <p className=" text-[#098A5B] mb-10 mt-2  uppercase  font-semibold">
-            Tudo que você precisa para alavancar o seu negócio
-          </p>
-          <div className=" grid grid-cols-3 grid-rows-2 gap-8 ">
+          <p className=" text-[#098A5B] mb-10 mt-2  uppercase  font-semibold"></p>
+          <div className=" grid mx-auto justify-center md:justify-normal md:grid-cols-3 md:grid-rows-2 gap-8 ">
             {services.map((service, index) => (
               <CardsServiceSection
                 key={index}
@@ -99,13 +72,13 @@ export default function Index() {
         <div className="bg-[#313131]">
           <section id="works" className=" pt-16 pb-10 ">
             <div className="  px-4  w-full   max-w-screen-lg mx-auto mb-20">
-              <TextAnimationEntry>
-                <span className=" border border-[#098A5B] w-16 h-0 mr-4"></span>
-                Área do Cliente
-              </TextAnimationEntry>{" "}
-              <p className=" text-[#098A5B] mb-10 mt-2">
-                ACOMPANHE SEU PROJETO DE UMA FORMA COMO VOCÊ NUNCA VIU
-              </p>
+              <TextAnimationEntry
+                title={"Área do Cliente"}
+                description={
+                  " ACOMPANHE SEU PROJETO DE UMA FORMA COMO VOCÊ NUNCA VIU"
+                }
+              />
+
               <p>
                 Oferecemos uma plataforma exclusiva para acompanhamento em tempo
                 real do desenvolvimento do seu projeto. Na área do cliente, você
@@ -122,9 +95,9 @@ export default function Index() {
           </section>
         </div>
       </section>
-      <LogoAnimation />
+
       <div className=" bg-[#101017]">
-        <section className=" max-w-screen-lg mx-auto text-white  pt-16 pb-10 ">
+        <section className=" max-w-screen-lg mx-auto text-white  pt-16 pb-10 px-4 ">
           <h2 className=" text-white text-3xl flex items-center ">
             {" "}
             <span className=" border border-[#098A5B] w-16 h-0 mr-4"></span>
@@ -133,7 +106,7 @@ export default function Index() {
           <p className=" text-[#098A5B] mb-10 mt-2">
             QUALIDADE, AGILIDADE E PRATICIDADE
           </p>
-          <div className=" grid justify-between grid-rows-2 grid-cols-2 h-full items-center place-items-center ">
+          <div className=" grid gap-4 md:justify-between md:grid-rows-2 md:grid-cols-2 h-full items-center place-items-center ">
             <img
               src={imagemabout1}
               width="495"
@@ -145,7 +118,7 @@ export default function Index() {
               src={imagemabout2}
               width="545"
               height="270"
-              alt="imagem about w-full mt-10"
+              alt="imagem about w-full mt-10  "
             />
             <img
               src={imagemabout3}
@@ -154,8 +127,8 @@ export default function Index() {
               alt="imagem about"
             />
           </div>
-          <div className=" flex justify-center items-center divide-x-2 divide-[#098A5B]">
-            <article className=" mt-14">
+          <div className=" flex justify-center items-center divide-y-2 md:divide-x-2 divide-[#098A5B] flex-wrap">
+            <article className=" mt-14 px-9">
               <strong className=" pb-5">Quem somos</strong>
               <p>
                 A OTC é uma empresa especializada em desenvolvimento web e
@@ -196,28 +169,9 @@ export default function Index() {
           <span className=" flex items-center justify-center mx-auto border border-[#098A5B] h-20 w-0 my-12"></span>
         </section>
       </div>
-      <LogoAnimation />
       <div className=" bg-[#313131]">
         <section className=" max-w-screen-lg mx-auto text-white  pt-16 pb-10 ">
-          <h2 className=" text-white text-3xl flex items-center ">
-            {" "}
-            <span className=" border border-[#098A5B] w-16 h-0 mr-4"></span>
-            Pacotes Completos
-          </h2>
-          <p className=" text-[#098A5B] mb-10 mt-2">
-            AJUDAMOS VOCÊ A COLOCAR SUA EMPRESA NO MUNDO
-          </p>
-          <article className=" flex justify-between">
-            {testemonials.map((testemonial, index) => (
-              <CardsDepoimentos
-                key={index}
-                src={testemonial.src}
-                testemonial={testemonial.testemonial}
-                nome={testemonial.nome}
-                cargo={testemonial.cargo}
-              />
-            ))}
-          </article>
+          <ImageGallery images={images} />
         </section>
       </div>
       <div>
@@ -227,9 +181,7 @@ export default function Index() {
         </section>
       </div>
 
-      <section>
-        <ImageGallery images={images} />
-      </section>
+      <section></section>
     </>
   );
 }

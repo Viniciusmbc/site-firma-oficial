@@ -7,50 +7,7 @@
     background-image: url("https://res.cloudinary.com/deaejawfj/image/upload/v1680785515/Rectangle_3_pavttw.webp");
     z-index: -99;
   }
-  .earth {
-    width: 150px;
-    height: 150px;
-    position: relative;
-  }
-
-  .moon {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 0%;
-    left: 80%;
-    transform: translate(300%, -400%);
-    animation: orbita linear 10s infinite;
-  }
-  @keyframes orbita {
-    0% {
-      width: 72px;
-    }
-    24% {
-      z-index: 0;
-    }
-    25% {
-      left: 120%;
-      top: 50%;
-      z-index: 2;
-    }
-    50% {
-      width: 128px;
-    }
-    74% {
-      z-index: 2;
-    }
-    75% {
-      top: 120%;
-      left: 50%;
-      z-index: 0;
-    }
-    100% {
-      width: 100px;
-      transform: rotate(360deg);
-    }
-  }
-
+  
   .gauge {
     position: relative;
     margin: 1rem auto;
@@ -113,9 +70,4 @@
     z-index: 300;
   }
 
-  .planets-container {
-    width: 150px;
-    height: 150px;
-    background-color: yellow;
-  }
 }
