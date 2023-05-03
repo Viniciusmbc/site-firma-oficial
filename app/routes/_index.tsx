@@ -180,8 +180,6 @@ export default function Index() {
           <p className=" text-[#098A5B]">CHECK OUT SOME OF OUR NEWS</p>
         </section>
       </div>
-
-      <section></section>
     </>
   );
 }
