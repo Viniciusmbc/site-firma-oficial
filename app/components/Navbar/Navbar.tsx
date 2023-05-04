@@ -16,8 +16,8 @@ export default function Navbar() {
   const menuItems: string[] = ["Home", "Serviços", "Sobre nós", "Blog"];
 
   return (
-    <header className=" text-white  z-50 text-lg  ">
-      <nav className="px-4  border-b-2 border-black  md:hidden">
+    <header className=" text-white  z-50 text-lg h-[200px]  ">
+      <nav className="px-4  border-b-2 border-black h-full fixed  md:hidden">
         <>
           <button
             className=" group absolute z-50  mt-4 flex h-12 w-12 flex-col items-center justify-center rounded border-2 border-black md:hidden "
@@ -71,7 +71,7 @@ export default function Navbar() {
           </ul>
         </div>
       </nav>
-      <nav className=" hidden border-black  border-b-black  mx-auto w-[100vw] max-w-screen-lg pt-2  px-7 md:block">
+      <nav className=" hidden border-black  border-b-black  mx-auto w-[100vw] max-w-screen-lg pt-2 h-fit fixed  px-7 md:block">
         <ul className="z-50 mt-3 flex justify-between items-center">
           <li>
             {" "}

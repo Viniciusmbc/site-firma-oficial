@@ -2,9 +2,6 @@ import type { V2_MetaFunction } from "@remix-run/node";
 
 // Components
 import CardsServiceSection from "~/components/Cards/CardsServiceSection";
-import CardsDepoimentos from "~/components/Cards/CardsDepoimentos";
-import CardsHeroSection from "~/components/Cards/CardsHeroSection";
-import TypeWritterWithHilowEffect from "~/components/TypeWritterEffect/molecules/TypeWritterWithHilowEffect";
 import TextAnimationEntry from "~/components/TextAnimationEntry/TextAnimationEntry";
 import ImageGallery from "~/components/Mosaic/ImageGallery";
 
@@ -20,9 +17,9 @@ import image6 from "public/6.png";
 
 // Data
 import { services } from "~/data/services";
-import { testemonials } from "~/data/testemonials";
-import { textherocards } from "~/data/textherocards";
-import LogoAnimation from "~/components/Logo/LogoAnimation";
+
+// Marquee
+import Marquee from "react-fast-marquee";
 
 // Meta
 export const meta: V2_MetaFunction = () => {
@@ -170,13 +167,35 @@ export default function Index() {
         </section>
       </div>
       <div className=" bg-[#313131]">
-        <section className=" max-w-screen-lg mx-auto text-white  pt-16 pb-10 ">
+        <section className="  mx-auto text-white  pt-16 pb-10 ">
           <ImageGallery images={images} />
         </section>
       </div>
+      <Marquee pauseOnHover={true} speed={40} className=" bg-[#098A5C]">
+        <p className=" py-4 text-[#D9D9D9] text-4xl">
+          Crie, cresça e venda mais: serviços de e-commerce, automação do
+          WhatsApp e relatórios mensais de tráfego para sua empresa.
+        </p>
+      </Marquee>
+      <section>
+        Na era digital, ter uma forte presença online é fundamental para o
+        sucesso de qualquer empresa. É por isso que oferecemos uma gama completa
+        de serviços para ajudá-lo a criar, otimizar e automatizar sua presença
+        digital. Com nossos serviços de desenvolvimento de site, você pode ter
+        certeza de que sua presença na web está em boas mãos. Contamos com uma
+        equipe de redação especializada para criar conteúdo otimizado para SEO
+        que ajudará você a aparecer nos resultados de pesquisa. Além disso,
+        nossos serviços de gestão de redes sociais e automação de WhatsApp
+        ajudarão você a se comunicar com seus clientes de maneira eficiente.
+        Ainda, conte com nossos relatórios mensais de tráfego fornecem insights
+        valiosos sobre como você pode melhorar ainda mais sua presença digital.
+        Com uma equipe especializada e soluções personalizadas, você pode ter
+        certeza de que sua empresa está pronta para crescer e se destacar na
+        web.
+      </section>
       <div>
         <section className=" text-white mt-20">
-          <p className=" text-3xl font-bold">Latest News</p>
+          <p className=" text-3xl font-bold">Blog</p>
           <p className=" text-[#098A5B]">CHECK OUT SOME OF OUR NEWS</p>
         </section>
       </div>
