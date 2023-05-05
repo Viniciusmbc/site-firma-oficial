@@ -3,7 +3,7 @@ import pencilImage from "public/pencilimg.png";
 import { useState } from "react";
 
 const PencilWritingAnimation = () => {
-  const text = "Redação e Conteúdo";
+  const text = "Redação & Conteúdo";
   const textArray = text.split("");
   const delayIncrement = 0.1;
   const [animationFinished, setAnimationFinished] = useState(false);

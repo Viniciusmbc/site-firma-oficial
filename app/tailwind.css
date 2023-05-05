@@ -7,7 +7,7 @@
     background-image: url("https://res.cloudinary.com/deaejawfj/image/upload/v1680785515/Rectangle_3_pavttw.webp");
     z-index: -99;
   }
-  
+
   .gauge {
     position: relative;
     margin: 1rem auto;
@@ -70,4 +70,17 @@
     z-index: 300;
   }
 
+  .contr {
+    display: grid;
+    grid-template: "container";
+    place-items: center;
+    place-content: center;
+    overflow: hidden;
+    max-height: clamp(450px, 50vh, 370px);
+  }
+
+  .contr > * {
+    grid-area: container;
+    max-width: 85vw;
+  }
 }

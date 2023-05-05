@@ -14,12 +14,14 @@ import image3 from "public/3.png";
 import image4 from "public/4.png";
 import image5 from "public/5.png";
 import image6 from "public/6.png";
+import devhelper from "public/DevHelper/devhelper.png";
 
 // Data
 import { services } from "~/data/services";
 
 // Marquee
 import Marquee from "react-fast-marquee";
+import { Link } from "@remix-run/react";
 
 // Meta
 export const meta: V2_MetaFunction = () => {
@@ -75,16 +77,30 @@ export default function Index() {
                   " ACOMPANHE SEU PROJETO DE UMA FORMA COMO VOCÊ NUNCA VIU"
                 }
               />
+              <strong className=" text-white text-2xl">
+                Não perca mais tempo trocando infinitas mensagens com quem você
+                contratou.
+              </strong>
+              <p className=" text-white text-lg my-6">
+                Mantenha-se atualizado constantemente sobre o andamento do seu
+                projeto e tenha a tranquilidade de que suas necessidades serão
+                atendidas com eficiência e agilidade.
+              </p>
 
-              <p>
-                Oferecemos uma plataforma exclusiva para acompanhamento em tempo
-                real do desenvolvimento do seu projeto. Na área do cliente, você
-                terá acesso às atualizações do seu protótipo, site e todas as
-                funcionalidades contratadas. Atualizamos diariamente o andamento
-                do seu projeto. Além disso, é possível fazer o download dos
-                conteúdos produzidos para suas redes sociais, revisar e sugerir
-                alterações nos textos e protótipo. Tudo em um único lugar para
-                sua maior comodidade.
+              <p className=" text-white text-lg my-6">
+                Oferecemos uma <b>plataforma exclusiva</b> para acompanhamento
+                em tempo real do desenvolvimento do seu projeto.
+              </p>
+              <p className=" text-white text-lg my-6">
+                Na área do cliente, você terá acesso às atualizações do seu
+                protótipo, site e todas as funcionalidades contratadas.
+                Atualizamos diariamente o andamento do seu projeto. Além disso,
+                é possível fazer o download dos conteúdos produzidos para suas
+                redes sociais, revisar e sugerir alterações nos textos e
+                protótipo.
+              </p>
+              <p className=" text-white text-lg">
+                Tudo em um único lugar para sua maior comodidade.
               </p>
             </div>
 
@@ -93,8 +109,18 @@ export default function Index() {
         </div>
       </section>
 
+      <section>
+        <img
+          src={devhelper}
+          width={542}
+          height={563}
+          alt="devhelper"
+          className=" max-w-full"
+        />
+      </section>
+
       <div className=" bg-[#101017]">
-        <section className=" max-w-screen-lg mx-auto text-white  pt-16 pb-10 px-4 ">
+        <section className=" max-w-screen-lg mx-auto text-white px-4 py-12 ">
           <h2 className=" text-white text-3xl flex items-center ">
             {" "}
             <span className=" border border-[#098A5B] w-16 h-0 mr-4"></span>
@@ -129,14 +155,18 @@ export default function Index() {
               <strong className=" pb-5">Quem somos</strong>
               <p>
                 A OTC é uma empresa especializada em desenvolvimento web e
-                redação de conteúdo. A nossa equipe adora o desafio de
-                desenvolver sites e criar conteúdo para a web. Somos
-                comprometidos em oferecer soluções rápidas e de qualidade para
-                que você possa ter a melhor experiência com a sua presença
-                online. Se você precisa de uma empresa de desenvolvimento de
-                websites confiável, a OTC é a escolha certa. Entre em contato
-                conosco hoje mesmo para saber mais sobre os nossos serviços e
-                como podemos ajudar a impulsionar a sua presença online.
+                redação de conteúdo. Fundada por uma redatora e um desenvolvedor
+                web que adoram o desafio de desenvolver sites e criar conteúdo
+                para a web. Somos comprometidos em oferecer soluções rápidas e
+                de qualidade para que você possa ter a melhor experiência com a
+                sua presença online. Se você precisa de uma empresa de
+                desenvolvimento de websites confiável, a OTC é a escolha certa.
+                Entre em{" "}
+                <Link className=" underline" to={"/contato"}>
+                  contato conosco hoje mesmo
+                </Link>{" "}
+                para saber mais sobre os nossos serviços e como podemos ajudar a
+                impulsionar a sua presença online.
               </p>
             </article>
             <article className=" mt-14 px-9">
@@ -163,11 +193,11 @@ export default function Index() {
               </p>
             </article>
           </div>
-          <span className=" flex items-center justify-center mx-auto border border-[#098A5B] h-20 w-0 my-12"></span>
+          <span className=" flex items-center justify-center mx-auto border border-[#098A5B] h-20 w-0  py-12"></span>
         </section>
       </div>
       <div className=" bg-[#313131]">
-        <section className="  mx-auto text-white  pt-16 pb-10 ">
+        <section className="  mx-auto text-white">
           <ImageGallery images={images} />
         </section>
       </div>
@@ -178,25 +208,32 @@ export default function Index() {
         </p>
       </Marquee>
       <section>
-        Na era digital, ter uma forte presença online é fundamental para o
-        sucesso de qualquer empresa. É por isso que oferecemos uma gama completa
-        de serviços para ajudá-lo a criar, otimizar e automatizar sua presença
-        digital. Com nossos serviços de desenvolvimento de site, você pode ter
-        certeza de que sua presença na web está em boas mãos. Contamos com uma
-        equipe de redação especializada para criar conteúdo otimizado para SEO
-        que ajudará você a aparecer nos resultados de pesquisa. Além disso,
-        nossos serviços de gestão de redes sociais e automação de WhatsApp
-        ajudarão você a se comunicar com seus clientes de maneira eficiente.
-        Ainda, conte com nossos relatórios mensais de tráfego fornecem insights
-        valiosos sobre como você pode melhorar ainda mais sua presença digital.
-        Com uma equipe especializada e soluções personalizadas, você pode ter
-        certeza de que sua empresa está pronta para crescer e se destacar na
-        web.
+        <article>
+          <p>
+            Na era digital, ter uma forte presença online é fundamental para o
+            sucesso de qualquer empresa. É por isso que oferecemos uma gama
+            completa de serviços para ajudá-lo a criar, otimizar e automatizar
+            sua presença digital. Com nossos serviços de desenvolvimento de
+            site, você pode ter certeza de que sua presença na web está em boas
+            mãos. Contamos com uma equipe de redação especializada para criar
+            conteúdo otimizado para SEO que ajudará você a aparecer nos
+            resultados de pesquisa. Além disso, nossos serviços de gestão de
+            redes sociais e automação de WhatsApp ajudarão você a se comunicar
+            com seus clientes de maneira eficiente. Ainda, conte com nossos
+            relatórios mensais de tráfego fornecem insights valiosos sobre como
+            você pode melhorar ainda mais sua presença digital. Com uma equipe
+            especializada e soluções personalizadas, você pode ter certeza de
+            que sua empresa está pronta para crescer e se destacar na web.
+          </p>
+        </article>
       </section>
       <div>
         <section className=" text-white mt-20">
           <p className=" text-3xl font-bold">Blog</p>
-          <p className=" text-[#098A5B]">CHECK OUT SOME OF OUR NEWS</p>
+          <p className=" text-[#098A5B]">
+            Confira nossos últimos artigos sobre tecnologia, redação e redes
+            sociais
+          </p>
         </section>
       </div>
     </>

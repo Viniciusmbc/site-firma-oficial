@@ -7,7 +7,12 @@ interface CardsNewsProps {
 export default function CardsNews({ src, title, description }: CardsNewsProps) {
   return (
     <article>
-      <img src={src} alt="Imagem da notícia" width={463} height={378} />
+      <img
+        src={src}
+        alt={`Imagem sobre a notícia ${title}`}
+        width={463}
+        height={378}
+      />
       <p>{title}</p>
       <p>{description}</p>
     </article>
