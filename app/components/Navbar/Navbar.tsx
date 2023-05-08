@@ -1,5 +1,5 @@
 // React Hooks
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // Icons
 import { genericHamburgerLine } from "../common/icons";
@@ -12,11 +12,26 @@ import LogoAnimation from "../Logo/LogoAnimation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [changeNav, setChangeNav] = useState(false);
 
   const menuItems: string[] = ["Home", "Serviços", "Sobre nós", "Blog"];
 
+  const changeBackground = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 250) {
+      setChangeNav(true);
+    } else {
+      setChangeNav(false);
+    }
+  };
+  useEffect(() => {
+    changeBackground();
+    // adding the event when scroll change background
+    window.addEventListener("scroll", changeBackground);
+  });
+
   return (
-    <header className=" text-white  z-50 text-lg h-[200px]  ">
+    <header className={`text-white min-w-full  z-50 text-lg h-[130px]  `}>
       <nav className="px-4  border-b-2 border-black h-full fixed  md:hidden">
         <>
           <button
@@ -71,9 +86,13 @@ export default function Navbar() {
           </ul>
         </div>
       </nav>
-      <nav className=" hidden border-black  border-b-black  mx-auto w-[100vw] max-w-screen-lg pt-2 h-fit fixed  px-7 md:block">
-        <ul className="z-50 mt-3 flex justify-between items-center">
-          <li>
+      <nav
+        className={` hidden border-black  border-b-black  mx-auto w-full max-w-screen-lg pt-2 h-fit  inset-x-0  px-7 md:flex md:justify-center md:mx-auto ${
+          changeNav ? "sticky bg-black/10" : "absolute top-0 z-50   "
+        }`}
+      >
+        <ul className="z-50 mt-3 flex justify-center mx-auto gap-10 items-center">
+          <li className=" mr-auto">
             {" "}
             <LogoAnimation />
           </li>

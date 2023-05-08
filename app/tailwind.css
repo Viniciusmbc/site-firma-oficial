@@ -4,8 +4,19 @@
 
 @layer components {
   .backgroundImage {
-    background-image: url("https://res.cloudinary.com/deaejawfj/image/upload/v1680785515/Rectangle_3_pavttw.webp");
+    background-image: url("https://res.cloudinary.com/deaejawfj/image/upload/v1683478256/backgroundhero_rob5tu.webp");
     z-index: -99;
+  }
+
+  .backgroundImageAreaCliente {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://res.cloudinary.com/deaejawfj/image/upload/e_recolor,o_100/v1683496739/bgareadocliente_zl0l5c.webp");
+    background-size: cover;
   }
 
   .gauge {

@@ -14,7 +14,7 @@ import image3 from "public/3.png";
 import image4 from "public/4.png";
 import image5 from "public/5.png";
 import image6 from "public/6.png";
-import devhelper from "public/DevHelper/devhelper.png";
+import imagemnews from "public/news/imagenews2.png";
 
 // Data
 import { services } from "~/data/services";
@@ -22,10 +22,14 @@ import { services } from "~/data/services";
 // Marquee
 import Marquee from "react-fast-marquee";
 import { Link } from "@remix-run/react";
+import DevHelperBanner from "~/components/Banner/DevHelper";
+import AreadoCliente from "~/components/Section/AreadoCliente";
+import CardsNews from "~/components/Cards/CardsNews";
+import { textosblog } from "~/data/textosblog";
 
 // Meta
 export const meta: V2_MetaFunction = () => {
-  return [{ title: "Digital Agency" }];
+  return [{ title: "OTC Soluções em TI" }];
 };
 
 export default function Index() {
@@ -67,57 +71,11 @@ export default function Index() {
           <span className=" flex items-center justify-center mx-auto border border-[#098A5B] h-20 w-0 mt-16"></span>
         </section>
       </div>
-      <section>
-        <div className="bg-[#313131]">
-          <section id="works" className=" pt-16 pb-10 ">
-            <div className="  px-4  w-full   max-w-screen-lg mx-auto mb-20">
-              <TextAnimationEntry
-                title={"Área do Cliente"}
-                description={
-                  " ACOMPANHE SEU PROJETO DE UMA FORMA COMO VOCÊ NUNCA VIU"
-                }
-              />
-              <strong className=" text-white text-2xl">
-                Não perca mais tempo trocando infinitas mensagens com quem você
-                contratou.
-              </strong>
-              <p className=" text-white text-lg my-6">
-                Mantenha-se atualizado constantemente sobre o andamento do seu
-                projeto e tenha a tranquilidade de que suas necessidades serão
-                atendidas com eficiência e agilidade.
-              </p>
-
-              <p className=" text-white text-lg my-6">
-                Oferecemos uma <b>plataforma exclusiva</b> para acompanhamento
-                em tempo real do desenvolvimento do seu projeto.
-              </p>
-              <p className=" text-white text-lg my-6">
-                Na área do cliente, você terá acesso às atualizações do seu
-                protótipo, site e todas as funcionalidades contratadas.
-                Atualizamos diariamente o andamento do seu projeto. Além disso,
-                é possível fazer o download dos conteúdos produzidos para suas
-                redes sociais, revisar e sugerir alterações nos textos e
-                protótipo.
-              </p>
-              <p className=" text-white text-lg">
-                Tudo em um único lugar para sua maior comodidade.
-              </p>
-            </div>
-
-            <span className=" flex items-center justify-center mx-auto border border-[#098A5B] h-20 w-0 my-12"></span>
-          </section>
-        </div>
+      <section className="bg-[#313131] max-w-full py-16">
+        <DevHelperBanner />
       </section>
 
-      <section>
-        <img
-          src={devhelper}
-          width={542}
-          height={563}
-          alt="devhelper"
-          className=" max-w-full"
-        />
-      </section>
+      <AreadoCliente />
 
       <div className=" bg-[#101017]">
         <section className=" max-w-screen-lg mx-auto text-white px-4 py-12 ">
@@ -150,9 +108,9 @@ export default function Index() {
               alt="imagem about"
             />
           </div>
-          <div className=" flex justify-center items-center divide-y-2 md:divide-x-2 divide-[#098A5B] flex-wrap">
+          <div className=" grid grid-cols-3 justify-center items-center divide-y-2 md:divide-x-2 divide-[#098A5B]">
             <article className=" mt-14 px-9">
-              <strong className=" pb-5">Quem somos</strong>
+              <p className=" pb-5 text-">Quem somos</p>
               <p>
                 A OTC é uma empresa especializada em desenvolvimento web e
                 redação de conteúdo. Fundada por uma redatora e um desenvolvedor
@@ -170,7 +128,7 @@ export default function Index() {
               </p>
             </article>
             <article className=" mt-14 px-9">
-              <strong className=" pb-5">Nossa missão</strong>
+              <p className=" pb-5">Nossa missão</p>
               <p>
                 Fornecer soluções em TI que atendam às necessidades dos nossos
                 clientes e oferecer serviços personalizados de desenvolvimento
@@ -180,7 +138,7 @@ export default function Index() {
               </p>
             </article>
             <article className=" mt-14 pl-9">
-              <strong className=" pb-5">Como trabalhamos</strong>
+              <p className=" pb-5">Como trabalhamos</p>
               <p>
                 A nossa empresa adota metodologias ágeis para proporcionar
                 otimização no desenvolvimento e entrega de resultados aos nossos
@@ -207,26 +165,30 @@ export default function Index() {
           WhatsApp e relatórios mensais de tráfego para sua empresa.
         </p>
       </Marquee>
-      <section>
-        <article>
-          <p>
-            Na era digital, ter uma forte presença online é fundamental para o
-            sucesso de qualquer empresa. É por isso que oferecemos uma gama
-            completa de serviços para ajudá-lo a criar, otimizar e automatizar
-            sua presença digital. Com nossos serviços de desenvolvimento de
-            site, você pode ter certeza de que sua presença na web está em boas
-            mãos. Contamos com uma equipe de redação especializada para criar
-            conteúdo otimizado para SEO que ajudará você a aparecer nos
-            resultados de pesquisa. Além disso, nossos serviços de gestão de
-            redes sociais e automação de WhatsApp ajudarão você a se comunicar
-            com seus clientes de maneira eficiente. Ainda, conte com nossos
-            relatórios mensais de tráfego fornecem insights valiosos sobre como
-            você pode melhorar ainda mais sua presença digital. Com uma equipe
-            especializada e soluções personalizadas, você pode ter certeza de
-            que sua empresa está pronta para crescer e se destacar na web.
-          </p>
-        </article>
-      </section>
+      <div className=" bg-[#101017]">
+        <section className=" py-16">
+          <article className=" w-full flex flex-col justify-center max-w-screen-xl mx-auto">
+            <p className=" w-full flex justify-center max-w-screen-xl mx-auto leading-relaxed text-lg text-white">
+              Na era digital, ter uma forte presença online é fundamental para o
+              sucesso de qualquer empresa. É por isso que oferecemos uma gama
+              completa de serviços para ajudá-lo a criar, otimizar e automatizar
+              sua presença digital. Com nossos serviços de desenvolvimento de
+              site, você pode ter certeza de que sua presença na web está em
+              boas mãos. Contamos com uma equipe de redação especializada para
+              criar conteúdo otimizado para SEO que ajudará você a aparecer nos
+              resultados de pesquisa. Além disso, nossos serviços de gestão de
+              redes sociais e automação de WhatsApp ajudarão você a se comunicar
+              com seus clientes de maneira eficiente. Ainda, conte com nossos
+              relatórios mensais de tráfego fornecem insights valiosos sobre
+              como você pode melhorar ainda mais sua presença digital. Com uma
+              equipe especializada e soluções personalizadas, você pode ter
+              certeza de que sua empresa está pronta para crescer e se destacar
+              na web.
+            </p>
+          </article>
+        </section>
+      </div>
+
       <div>
         <section className=" text-white mt-20">
           <p className=" text-3xl font-bold">Blog</p>
@@ -234,6 +196,16 @@ export default function Index() {
             Confira nossos últimos artigos sobre tecnologia, redação e redes
             sociais
           </p>
+          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
+            {textosblog.map((conteudo, index) => (
+              <CardsNews
+                key={index}
+                title={conteudo.title}
+                src={conteudo.src}
+                description={conteudo.description}
+              />
+            ))}
+          </div>
         </section>
       </div>
     </>

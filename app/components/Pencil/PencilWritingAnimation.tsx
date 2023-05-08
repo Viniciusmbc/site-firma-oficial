@@ -25,16 +25,17 @@ const PencilWritingAnimation = () => {
     <div className="flex flex-col gap-9 items-center  mt-5">
       <motion.div
         className="relative w-14 h-14"
+        style={animationFinished ? { top: 0, left: 0 } : { top: 45 }}
         animate={{
           x: [
-            -10, -10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 120, 130, 140, 150,
-            160, 170, 180, 190, 200, 0,
+            -100, -95, -85, -80, -70, -60, -50, -40, -30, -20, -10, 0, 10, 20,
+            30, 40, 50, 60, 70, 80, 90, 100, 110, 0,
           ],
           rotate: [0, -5, 5, -5, 5, -5, 5, -5, 5, 0],
           transition: {
             duration: 2,
             ease: "easeInOut",
-            times: [0, 3],
+            times: [0, 1, 2, 3],
             repeatType: "mirror",
           },
         }}
@@ -51,8 +52,8 @@ const PencilWritingAnimation = () => {
         <img
           src={pencilImage}
           alt="pencil"
-          className={`relative top-[${animationFinished ? 0 : 40}px]  left-[${
-            animationFinished ? 0 : -80
+          className={`relative top-[${animationFinished ? "0" : "0"}]  left-[${
+            animationFinished ? 0 : -100
           }px] w-14 h-14`}
         />
       </motion.div>

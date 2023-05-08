@@ -12,7 +12,7 @@ export default function CardsHeroSection({
       {icon}
       <div className=" pb-3 pl-4">
         <strong className=" text-xl uppercase">{title}</strong>
-        <span className=" w-10 h-1 bg-[#098A5B] block"></span>
+        <span className=" w-16 h-1 bg-[#098A5B] block"></span>
       </div>
 
       <p className=" mt-4 px-4 pb-7 flex items-center">{description}</p>
