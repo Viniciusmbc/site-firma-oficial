@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import devhelperimg from "public/DevHelper/devhelperimg.png";
 import HighlightWrapper from "../TypeWritterEffect/atoms/HighlightWrapper";
 
@@ -13,9 +14,17 @@ export default function DevHelperBanner() {
           <p className=" text-6xl text-white my-16">Prazos apertados?</p>
         </HighlightWrapper>
 
-        <h2 className="text-3xl text-[#098A5B] my-16 max-w-2xl">
-          Deixe a <u> DevHelper</u> te ajudar você a cumprir seus projetos a
-          tempo!
+        <h2 className="text-3xl text-[#098A5B] my-16 flex gap-1 max-w-2xl">
+          Deixe a{" "}
+          <motion.span
+            className="text-[#FFC107] animate-pulse"
+            initial={{ scale: 1 }}
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ duration: 1, repeat: Infinity }}
+          >
+            DevHelper
+          </motion.span>{" "}
+          te ajudar você a cumprir seus projetos a tempo!
         </h2>
         <button className=" text-white/95 transition ease-in-out delay-150 bg-[#098A5B] p-4  hover:-translate-y-1 hover:scale-110 hover:bg-[#0FD68D] duration-300 ">
           Clique aqui e fale conosco!
