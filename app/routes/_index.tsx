@@ -112,19 +112,12 @@ export default function Index() {
             <article className=" mt-14 px-9">
               <p className=" pb-5 text-">Quem somos</p>
               <p>
-                A OTC é uma empresa especializada em desenvolvimento web e
-                redação de conteúdo. Fundada por uma redatora e um desenvolvedor
-                web que adoram o desafio de desenvolver sites e criar conteúdo
-                para a web. Somos comprometidos em oferecer soluções rápidas e
-                de qualidade para que você possa ter a melhor experiência com a
-                sua presença online. Se você precisa de uma empresa de
-                desenvolvimento de websites confiável, a OTC é a escolha certa.
-                Entre em{" "}
-                <Link className=" underline" to={"/contato"}>
-                  contato conosco hoje mesmo
-                </Link>{" "}
-                para saber mais sobre os nossos serviços e como podemos ajudar a
-                impulsionar a sua presença online.
+                A OTC, fundada por uma redatora e um desenvolvedor web, é
+                especializada em desenvolvimento web e redação de conteúdo.
+                Oferecemos soluções rápidas e de qualidade para impulsionar a
+                sua presença online. Entre em contato conosco para saber mais
+                sobre nossos serviços de desenvolvimento de websites confiáveis.
+                Desafie-nos a criar o melhor conteúdo para sua presença online.
               </p>
             </article>
             <article className=" mt-14 px-9">
@@ -140,7 +133,7 @@ export default function Index() {
             <article className=" mt-14 pl-9">
               <p className=" pb-5">Como trabalhamos</p>
               <p>
-                A nossa empresa adota metodologias ágeis para proporcionar
+                Adotamos metodologias ágeis como o SCRUM para proporcionar
                 otimização no desenvolvimento e entrega de resultados aos nossos
                 clientes. Com comunicação próxima e flexibilidade, somos capazes
                 de nos adaptar rapidamente às mudanças do mercado e enfrentar
@@ -189,9 +182,9 @@ export default function Index() {
         </section>
       </div>
 
-      <div>
+      <div className=" bg-[#313131] w-full">
         <section className=" text-white mt-20">
-          <p className=" text-3xl font-bold">Blog</p>
+          <p className=" text-3xl font-bold text-white">Blog</p>
           <p className=" text-[#098A5B]">
             Confira nossos últimos artigos sobre tecnologia, redação e redes
             sociais

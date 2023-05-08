@@ -19,7 +19,6 @@ export default function AreadoCliente() {
           alt=""
         />
         <div
-          ref={ref}
           className={`absolute inset-0  ${
             isInView
               ? "bg-opacity-80 bg-[#101017] transition duration-200  ease-in"
@@ -27,7 +26,10 @@ export default function AreadoCliente() {
           } `}
         ></div>
         <div className="flex h-full items-center justify-center relative">
-          <div className="  px-4  w-full   max-w-screen-lg mx-auto mb-20 relative">
+          <div
+            className="  px-4  w-full   max-w-screen-lg mx-auto mb-20 relative"
+            ref={ref}
+          >
             <TextAnimationEntry
               title={"Área do Cliente"}
               description={

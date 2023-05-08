@@ -42,7 +42,7 @@ const ImageGallery = ({ images }: { images: any }) => {
             key={index}
             src={image}
             onLoad={handleImageLoad}
-            alt=""
+            alt="Imagem do Mosaico do site da OTC Soluções em TI"
             className={` w-1/4 h-1/4 object-cover ${
               completedAnimation
                 ? ""
