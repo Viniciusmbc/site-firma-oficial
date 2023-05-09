@@ -29,8 +29,8 @@ export default function CardsServiceSection({
       <img
         src={src}
         alt={description}
-        width="47"
-        height="44"
+        width="71"
+        height="68"
         className=" mt-12 mb-10 ml-7"
       />
       <strong className=" text-3xl mx-auto ml-7 flex  mt-10 mb-5 max-w-full  ">

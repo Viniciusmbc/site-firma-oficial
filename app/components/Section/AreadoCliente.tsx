@@ -36,6 +36,7 @@ export default function AreadoCliente() {
                 " ACOMPANHE SEU PROJETO DE UMA FORMA COMO VOCÊ NUNCA VIU"
               }
             />
+
             <strong
               className={`${
                 isInView

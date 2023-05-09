@@ -80,18 +80,4 @@
     animation: rotate 2s ease-in-out;
     z-index: 300;
   }
-
-  .contr {
-    display: grid;
-    grid-template: "container";
-    place-items: center;
-    place-content: center;
-    overflow: hidden;
-    max-height: clamp(450px, 50vh, 370px);
-  }
-
-  .contr > * {
-    grid-area: container;
-    max-width: 85vw;
-  }
 }

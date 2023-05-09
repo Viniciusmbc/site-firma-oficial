@@ -15,6 +15,8 @@ import Footer from "./components/Footer/Footer";
 import TypeWritterWithHilowEffect from "./components/TypeWritterEffect/molecules/TypeWritterWithHilowEffect";
 import { textherocards } from "./data/textherocards";
 import CardsHeroSection from "./components/Cards/CardsHeroSection";
+import ChatWindow from "./components/ChatWindow/ChatWindow";
+import ButtonWithAnimatedBackground from "./components/AnimateBackground/ButtonWithAnimatedBackground";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
@@ -29,20 +31,18 @@ export default function App() {
       </head>
 
       <body>
-        <main className=" max-w-[100vw] overflow-x-hidden">
+        <main className=" max-w-[100vw] overflow-x-hidden relative">
           <div className=" bg-[url(https://res.cloudinary.com/deaejawfj/image/upload/v1683478256/backgroundhero_rob5tu.webp)]  min-h-screen items-center justify-center bg-cover bg-fixed bg-center">
             <Navbar />
 
             <section className=" text-white mt-32 mx-auto w-full  px-4  max-w-screen-lg">
-              <p className=" text-[#098A5B] font-semibold">
+              <p className=" text-black text-lg font-semibold">
                 Seu site completo é aqui:
               </p>
 
               <TypeWritterWithHilowEffect />
 
-              <button className=" animate-pulse text-lg bg-black/25 border border-[#098A5B] text-[#098A5B] p-7 my-9">
-                Fale Conosco
-              </button>
+              <ButtonWithAnimatedBackground />
 
               <div className=" flex justify-center items-center md:justify-between flex-wrap">
                 {textherocards.map((text, index) => (
@@ -56,6 +56,8 @@ export default function App() {
               </div>
             </section>
           </div>
+
+          <ChatWindow />
 
           <Outlet />
         </main>

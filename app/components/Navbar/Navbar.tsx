@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <header className={`text-white min-w-full  z-50 text-lg h-[130px]  `}>
-      <nav className="px-4  border-b-2 border-black h-full fixed  md:hidden">
+      <nav className="px-4  border-b-2 border-black h-full fixed text-[#098A5B]  md:hidden">
         <>
           <button
             className=" group absolute z-50  mt-4 flex h-12 w-12 flex-col items-center justify-center rounded border-2 border-black md:hidden "
@@ -59,7 +59,7 @@ export default function Navbar() {
               }`}
             />
           </button>
-          <figure className=" pt-1 ml-auto w-fit md:hidden">
+          <figure className=" pt-1 mr-auto w-fit md:hidden">
             {" "}
             <LogoAnimation />
           </figure>

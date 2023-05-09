@@ -108,9 +108,9 @@ export default function Index() {
               alt="imagem about"
             />
           </div>
-          <div className=" grid grid-cols-3 justify-center items-center divide-y-2 md:divide-x-2 divide-[#098A5B]">
+          <div className=" grid grid-cols-1 md:grid-cols-3 justify-center items-center divide-y-2 md:divide-x-2 divide-[#098A5B]">
             <article className=" mt-14 px-9">
-              <p className=" pb-5 text-">Quem somos</p>
+              <p className=" pb-5 text-2xl">Quem somos</p>
               <p>
                 A OTC, fundada por uma redatora e um desenvolvedor web, é
                 especializada em desenvolvimento web e redação de conteúdo.
@@ -121,7 +121,7 @@ export default function Index() {
               </p>
             </article>
             <article className=" mt-14 px-9">
-              <p className=" pb-5">Nossa missão</p>
+              <p className=" pb-5 text-2xl">Nossa missão</p>
               <p>
                 Fornecer soluções em TI que atendam às necessidades dos nossos
                 clientes e oferecer serviços personalizados de desenvolvimento
@@ -131,7 +131,7 @@ export default function Index() {
               </p>
             </article>
             <article className=" mt-14 pl-9">
-              <p className=" pb-5">Como trabalhamos</p>
+              <p className=" pb-5 text-2xl">Como trabalhamos</p>
               <p>
                 Adotamos metodologias ágeis como o SCRUM para proporcionar
                 otimização no desenvolvimento e entrega de resultados aos nossos
@@ -159,7 +159,7 @@ export default function Index() {
         </p>
       </Marquee>
       <div className=" bg-[#101017]">
-        <section className=" py-16">
+        <section className=" py-16 px-4">
           <article className=" w-full flex flex-col justify-center max-w-screen-xl mx-auto">
             <p className=" w-full flex justify-center max-w-screen-xl mx-auto leading-relaxed text-lg text-white">
               Na era digital, ter uma forte presença online é fundamental para o
@@ -183,7 +183,7 @@ export default function Index() {
       </div>
 
       <div className=" bg-[#313131] w-full">
-        <section className=" text-white mt-20">
+        <section className=" text-white py-20 px-4">
           <p className=" text-3xl font-bold text-white">Blog</p>
           <p className=" text-[#098A5B]">
             Confira nossos últimos artigos sobre tecnologia, redação e redes
