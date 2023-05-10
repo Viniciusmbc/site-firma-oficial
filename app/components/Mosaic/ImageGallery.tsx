@@ -74,7 +74,10 @@ const ImageGallery = ({ images }: { images: any }) => {
         </strong>
 
         <ul className=" list-inside list-disc text-2xl font-semibold flex flex-col gap-y-4">
-          <li>Criamos o design do seu site e/ou ecommerce;</li>
+          <li>
+            Criamos o design da sua landing page, ecommerce ou site de sua
+            empresa ou escritório;
+          </li>
           <li>Desenvolvemos seu Website otimizado para desktop e mobile;</li>
           <li>Criamos os textos para o seu site;</li>
           <li>Fazemos os textos do blog do seu site;</li>
@@ -83,7 +86,10 @@ const ImageGallery = ({ images }: { images: any }) => {
             cliente procura;
           </li>
           <li>Criamos conteúdos para as suas redes sociais;</li>
-          <li>Automatizamos o WhatsApp do seu negócio.</li>
+          <li>
+            Automatizamos o WhatsApp do seu negócio para vocês estar sempre
+            online.
+          </li>
         </ul>
 
         <Link

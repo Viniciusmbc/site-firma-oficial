@@ -14,6 +14,10 @@ export default function DevHelperBanner() {
           <p className=" text-6xl text-white my-16">Prazos apertados?</p>
         </HighlightWrapper>
 
+        <p className=" text-2xl text-white my-16">
+          Precisa de ajuda para finalizar seus freelas ou projetos pessoais?
+        </p>
+
         <h2 className="text-3xl text-[#098A5B] my-16  max-w-2xl">
           Deixe a{" "}
           <motion.span

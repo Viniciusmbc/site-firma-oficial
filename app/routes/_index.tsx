@@ -14,13 +14,13 @@ import image3 from "public/3.png";
 import image4 from "public/4.png";
 import image5 from "public/5.png";
 import image6 from "public/6.png";
-import imagemnews from "public/news/imagenews2.png";
 
 // Data
 import { services } from "~/data/services";
 
 // Marquee
 import Marquee from "react-fast-marquee";
+
 import { Link } from "@remix-run/react";
 import DevHelperBanner from "~/components/Banner/DevHelper";
 import AreadoCliente from "~/components/Section/AreadoCliente";
