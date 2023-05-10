@@ -36,7 +36,7 @@ export default function App() {
             <Navbar />
 
             <section className=" text-white mt-32 mx-auto w-full  px-4  max-w-screen-lg">
-              <p className=" text-black text-lg font-semibold">
+              <p className=" text-[#098A5B] text-lg font-semibold">
                 Seu site completo é aqui:
               </p>
 

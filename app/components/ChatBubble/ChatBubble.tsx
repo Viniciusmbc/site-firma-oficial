@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import type { Variants } from "framer-motion";
 import { motion } from "framer-motion";
+import ChatMessage from "../ChatWindow/ChatMessages.tsx/ChatMessages";
+import brainimage from "public/logo/brainImage.png";
 
 interface ChatBubbleProps {
   message: string;
@@ -19,9 +21,14 @@ const chatWindowVariants: Variants = {
 const ChatBubble: React.FC<ChatBubbleProps> = ({ message }) => {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [userMessage, setUserMessage] = useState("");
+  const [selectedOption, setSelectedOption] = useState("");
 
   const handleClick = () => {
     setIsChatOpen(!isChatOpen);
+  };
+
+  const handleOptionClick = (option: string) => {
+    setSelectedOption(option);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -37,7 +44,7 @@ const ChatBubble: React.FC<ChatBubbleProps> = ({ message }) => {
   return (
     <div className="relative">
       <div className="flex items-center space-x-2">
-        <div className="w-8 h-8 rounded-full bg-white shadow-lg bg-[url(../public/logo/brainImage.png)]"></div>
+        <img src={brainimage} alt="brain" className="w-10 h-10 bg-white" />
         <motion.div
           className="bg-blue-500 text-white px-4 py-2 rounded-lg cursor-pointer"
           initial="hidden"
@@ -50,34 +57,42 @@ const ChatBubble: React.FC<ChatBubbleProps> = ({ message }) => {
       </div>
 
       {isChatOpen && (
-        <motion.div
-          className="absolute bottom-12 right-0 bg-white w-64 h-48 border border-gray-300 rounded-lg mt-8 p-4"
-          initial="hidden"
-          animate="visible"
-          variants={chatWindowVariants}
-        >
+        <>
           <motion.div
-            className="bg-blue-500 text-white px-4 py-2 rounded-lg cursor-pointer"
-            onClick={handleClick}
+            className="absolute bottom-12 right-0 bg-white w-full max-w-xs h-48 border border-gray-300 rounded-lg mt-8 p-4"
+            initial="hidden"
+            animate="visible"
+            variants={chatWindowVariants}
           >
-            {message}
-          </motion.div>
-          <div className="mb-2">
-            <input
-              type="text"
-              value={userMessage}
-              onChange={handleInputChange}
-              className="border border-gray-300 rounded-lg px-2 py-1 w-full"
-              placeholder="Digite sua mensagem..."
+            <motion.div
+              className="bg-blue-500 text-white px-4 py-2 rounded-lg text-center text-lg"
+              initial="hidden"
+              animate="visible"
+              variants={chatBubbleVariants}
+            >
+              O que você quer desenvolver?
+            </motion.div>
+
+            <ChatMessage
+              message="E-commerce"
+              isOption={true}
+              handleOptionClick={handleOptionClick}
             />
+            <ChatMessage
+              message="Landing Page"
+              isOption={true}
+              handleOptionClick={handleOptionClick}
+            />
+            <ChatMessage
+              message="Outra opção"
+              isOption={true}
+              handleOptionClick={handleOptionClick}
+            />
+          </motion.div>
+          <div>
+            {selectedOption && <p>Você selecionou: {selectedOption}</p>}
           </div>
-          <button
-            className="bg-blue-500 text-white px-4 py-1 rounded-lg"
-            onClick={handleSendMessage}
-          >
-            Enviar
-          </button>
-        </motion.div>
+        </>
       )}
     </div>
   );
