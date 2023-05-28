@@ -21,11 +21,11 @@ import { services } from "~/data/services";
 // Marquee
 import Marquee from "react-fast-marquee";
 
-import { Link } from "@remix-run/react";
 import DevHelperBanner from "~/components/Banner/DevHelper";
 import AreadoCliente from "~/components/Section/AreadoCliente";
 import CardsNews from "~/components/Cards/CardsNews";
 import { textosblog } from "~/data/textosblog";
+import Image from "remix-image";
 
 // Meta
 export const meta: V2_MetaFunction = () => {
@@ -86,24 +86,47 @@ export default function Index() {
 
           <p className=" text-[#098A5B] mb-10 mt-2"></p>
           <div className=" grid gap-4 md:justify-between md:grid-rows-2 md:grid-cols-2 h-full items-center place-items-center ">
-            <img
+            <Image
+              loaderUrl="/api/image"
               src={imagemabout1}
-              width="495"
-              height="575"
-              alt="imagem about"
-              className=" row-span-3  max-h-[510px] "
+              responsive={[
+                {
+                  size: {
+                    width: 100,
+                    height: 100,
+                  },
+                  maxWidth: 200,
+                },
+              ]}
+              dprVariants={[1, 3]}
             />
-            <img
+            <Image
+              loaderUrl="/api/image"
               src={imagemabout2}
-              width="545"
-              height="270"
-              alt="imagem about w-full mt-10  "
+              responsive={[
+                {
+                  size: {
+                    width: 100,
+                    height: 100,
+                  },
+                  maxWidth: 200,
+                },
+              ]}
+              dprVariants={[1, 3]}
             />
-            <img
+            <Image
+              loaderUrl="/api/image"
               src={imagemabout3}
-              width="545"
-              height="270"
-              alt="imagem about"
+              responsive={[
+                {
+                  size: {
+                    width: 100,
+                    height: 100,
+                  },
+                  maxWidth: 200,
+                },
+              ]}
+              dprVariants={[1, 3]}
             />
           </div>
           <div className=" grid grid-cols-1 md:grid-cols-3 justify-center items-center divide-y-2 md:divide-x-2 divide-[#098A5B]">

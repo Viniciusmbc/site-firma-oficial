@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import devhelperimg from "public/DevHelper/devhelperimg.png";
 import HighlightWrapper from "../TypeWritterEffect/atoms/HighlightWrapper";
+import { Image } from "remix-image";
 
 export default function DevHelperBanner() {
   return (
@@ -34,7 +35,21 @@ export default function DevHelperBanner() {
           Clique aqui e fale conosco!
         </button>
       </div>
-
+      <Image
+        loaderUrl="/api/image"
+        alt="Imagem do DevHelper"
+        src={devhelperimg}
+        responsive={[
+          {
+            size: {
+              width: 100,
+              height: 100,
+            },
+            maxWidth: 330,
+          },
+        ]}
+        dprVariants={[1, 3]}
+      />
       <img
         src={devhelperimg}
         width={330}

@@ -6,6 +6,8 @@ import { useRef } from "react";
 // Framer motion
 import { useInView } from "framer-motion";
 
+import Image from "remix-image";
+
 export default function AreadoCliente() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
@@ -13,11 +15,21 @@ export default function AreadoCliente() {
   return (
     <div className="w-full min-h-screen flex items-center justify-center ">
       <div className="w-full h-screen rounded-lg shadow-2xl overflow-hidden relative">
-        <img
-          className="absolute inset-0 h-screen w-screen object-cover"
+        <Image
           src="https://res.cloudinary.com/deaejawfj/image/upload/e_recolor,o_100/v1683496739/bgareadocliente_zl0l5c.webp"
-          alt=""
+          responsive={[
+            {
+              size: { width: 100, height: 100 },
+              maxWidth: 500,
+            },
+            {
+              size: { width: 600, height: 600 },
+            },
+          ]}
+          dprVariants={[1, 3]}
+          className="absolute inset-0 h-screen w-screen object-cover"
         />
+
         <div
           className={`absolute inset-0  ${
             isInView

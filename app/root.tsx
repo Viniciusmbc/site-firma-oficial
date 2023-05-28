@@ -8,7 +8,6 @@ import {
 } from "@remix-run/react";
 
 import type { LinksFunction } from "@remix-run/node";
-
 import styles from "./tailwind.css";
 import Navbar from "~/components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -17,8 +16,12 @@ import { textherocards } from "./data/textherocards";
 import CardsHeroSection from "./components/Cards/CardsHeroSection";
 import ChatWindow from "./components/ChatWindow/ChatWindow";
 import ButtonWithAnimatedBackground from "./components/AnimateBackground/ButtonWithAnimatedBackground";
+import remixImageStyles from "remix-image/remix-image.css";
 
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: styles },
+  { rel: "stylesheet", href: remixImageStyles },
+];
 
 export default function App() {
   return (
