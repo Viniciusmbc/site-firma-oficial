@@ -35,7 +35,7 @@ const PencilWritingAnimation = () => {
           transition: {
             duration: 2,
             ease: "easeInOut",
-            times: [0, 1, 2, 3],
+            times: [0, 2, 4, 6],
             repeatType: "mirror",
           },
         }}

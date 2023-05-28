@@ -8,7 +8,7 @@ import { useInView } from "framer-motion";
 
 export default function AreadoCliente() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
 
   return (
     <div className="w-full min-h-screen flex items-center justify-center ">

@@ -33,10 +33,10 @@ export default function CardsServiceSection({
         height="68"
         className=" mt-12 mb-10 ml-7"
       />
-      <strong className=" text-3xl mx-auto ml-7 flex  mt-10 mb-5 max-w-full  ">
+      <strong className=" text-3xl mx-auto p-4 flex  mt-10 mb-5 max-w-full  ">
         {title}
       </strong>
-      <p className=" mb-14 ml-7 mt-5">{description}</p>
+      <p className=" mb-14 p-4  mt-5">{description}</p>
     </motion.article>
   );
 }

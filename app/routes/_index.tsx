@@ -79,14 +79,12 @@ export default function Index() {
 
       <div className=" bg-[#101017]">
         <section className=" max-w-screen-lg mx-auto text-white px-4 py-12 ">
-          <h2 className=" text-white text-3xl flex items-center ">
-            {" "}
-            <span className=" border border-[#098A5B] w-16 h-0 mr-4"></span>
-            Sobre nós
-          </h2>
-          <p className=" text-[#098A5B] mb-10 mt-2">
-            QUALIDADE, AGILIDADE E PRATICIDADE
-          </p>
+          <TextAnimationEntry
+            title={"Sobre Nós"}
+            description={"QUALIDADE, AGILIDADE E PRATICIDADE"}
+          />
+
+          <p className=" text-[#098A5B] mb-10 mt-2"></p>
           <div className=" grid gap-4 md:justify-between md:grid-rows-2 md:grid-cols-2 h-full items-center place-items-center ">
             <img
               src={imagemabout1}
@@ -160,7 +158,7 @@ export default function Index() {
       </Marquee>
       <div className=" bg-[#101017]">
         <section className=" py-16 px-4">
-          <article className=" w-full flex flex-col justify-center max-w-screen-xl mx-auto">
+          <article className=" w-full flex flex-col justify-center max-w-screen-lg  mx-auto">
             <p className=" w-full flex justify-center max-w-screen-xl mx-auto leading-relaxed text-lg text-white">
               Na era digital, ter uma forte presença online é fundamental para o
               sucesso de qualquer empresa. É por isso que oferecemos uma gama
@@ -183,12 +181,14 @@ export default function Index() {
       </div>
 
       <div className=" bg-[#313131] w-full">
-        <section className=" text-white py-20 px-4">
-          <p className=" text-3xl font-bold text-white">Blog</p>
-          <p className=" text-[#098A5B]">
-            Confira nossos últimos artigos sobre tecnologia, redação e redes
-            sociais
-          </p>
+        <section className="  w-full  py-32  px-4  max-w-screen-lg mx-auto text-white">
+          <TextAnimationEntry
+            title={"Blog"}
+            description={
+              "Confira nossos últimos artigos sobre tecnologia, redação e redes sociais"
+            }
+          />
+
           <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
             {textosblog.map((conteudo, index) => (
               <CardsNews

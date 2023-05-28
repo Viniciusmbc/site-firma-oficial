@@ -4,7 +4,7 @@ import HighlightWrapper from "../TypeWritterEffect/atoms/HighlightWrapper";
 
 export default function DevHelperBanner() {
   return (
-    <div className="  flex flex-wrap p-6  items-center justify-center border  border-[#098A5B] max-w-full mx-4 ">
+    <div className="  flex flex-wrap p-6  items-center justify-center border  border-[#098A5B] w-full max-w-screen-lg mx-auto">
       <div>
         <strong className=" border border-[#098A5B] text-[#098A5B] bg-[#000] h-fit p-3 max-w-fit rounded-xl text-3xl mt-6">
           Hey, Dev!
@@ -28,7 +28,7 @@ export default function DevHelperBanner() {
           >
             DevHelper
           </motion.span>{" "}
-          te ajudar você a cumprir seus projetos a tempo!
+          te ajudar a cumprir seus projetos no prazo!
         </h2>
         <button className=" text-white/95 transition ease-in-out delay-150 bg-[#098A5B] p-4  hover:-translate-y-1 hover:scale-110 hover:bg-[#0FD68D] duration-300 ">
           Clique aqui e fale conosco!

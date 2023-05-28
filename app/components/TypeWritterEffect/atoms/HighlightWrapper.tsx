@@ -1,4 +1,5 @@
-import React from "react";
+import { useInView } from "framer-motion";
+import React, { useRef } from "react";
 
 interface HighlightWrapperProps {
   children: React.ReactNode;
@@ -8,10 +9,19 @@ interface HighlightWrapperProps {
 const HighlightWrapper: React.FC<HighlightWrapperProps> = ({
   children,
   classname,
-}) => (
-  <div id="highlight-wrapper" className={`animate-highlight ${classname}`}>
-    {children}
-  </div>
-);
+}) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  return (
+    <div
+      ref={ref}
+      id="highlight-wrapper"
+      className={`${isInView ? "animate-highlight" : ""} ${classname}`}
+    >
+      {children}
+    </div>
+  );
+};
 
 export default HighlightWrapper;
