@@ -2,7 +2,16 @@ import { useRef, useState } from "react";
 import { useInView, motion } from "framer-motion";
 import { Link } from "@remix-run/react";
 
-const ImageGallery = ({ images }: { images: any }) => {
+const ImageGallery = () => {
+  const images = [
+    "https://res.cloudinary.com/deaejawfj/image/upload/v1685715856/4_q7lbuz.webp",
+    "https://res.cloudinary.com/deaejawfj/image/upload/v1685715853/3_dwmbxj.webp",
+    "https://res.cloudinary.com/deaejawfj/image/upload/v1685715852/6_ghepd9.webp",
+    "https://res.cloudinary.com/deaejawfj/image/upload/v1685715852/2_bsbbil.webp",
+    "https://res.cloudinary.com/deaejawfj/image/upload/v1685715852/7_zgmfcd.webp",
+    "https://res.cloudinary.com/deaejawfj/image/upload/v1685715852/5_f4zvnl.webp",
+  ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });

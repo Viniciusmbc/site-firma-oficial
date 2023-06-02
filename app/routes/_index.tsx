@@ -33,17 +33,6 @@ export const meta: V2_MetaFunction = () => {
 };
 
 export default function Index() {
-  const images = [
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
-    image2,
-    image3,
-    image4,
-  ];
-
   return (
     <>
       <div className=" bg-[#101017]">
@@ -170,7 +159,7 @@ export default function Index() {
       </div>
       <div className=" bg-[#313131]">
         <section className="  mx-auto text-white">
-          <ImageGallery images={images} />
+          <ImageGallery />
         </section>
       </div>
       <Marquee pauseOnHover={true} speed={40} className=" bg-[#098A5C]">

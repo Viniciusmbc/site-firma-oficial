@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "remix-image";
 
 interface CardsServiceSectionProps {
   src: string;
@@ -26,11 +27,19 @@ export default function CardsServiceSection({
       animate={isInView ? { y: 0, opacity: 1 } : {}}
       transition={{ duration: 0.5, delay }}
     >
-      <img
+      <Image
+        loaderUrl="/api/image"
         src={src}
-        alt={description}
-        width="71"
-        height="68"
+        responsive={[
+          {
+            size: {
+              width: 100,
+              height: 100,
+            },
+            maxWidth: 200,
+          },
+        ]}
+        dprVariants={[1, 3]}
         className=" mt-12 mb-10 ml-7"
       />
       <strong className=" text-3xl mx-auto p-4 flex  mt-10 mb-5 max-w-full  ">
