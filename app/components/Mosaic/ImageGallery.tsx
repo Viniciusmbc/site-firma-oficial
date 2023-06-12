@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { useInView, motion } from "framer-motion";
+import { useInView, m, LazyMotion, domAnimation } from "framer-motion";
 import { Link } from "@remix-run/react";
 
 const ImageGallery = () => {
@@ -10,6 +10,8 @@ const ImageGallery = () => {
     "https://res.cloudinary.com/deaejawfj/image/upload/v1685715852/2_bsbbil.webp",
     "https://res.cloudinary.com/deaejawfj/image/upload/v1685715852/7_zgmfcd.webp",
     "https://res.cloudinary.com/deaejawfj/image/upload/v1685715852/5_f4zvnl.webp",
+    "https://res.cloudinary.com/deaejawfj/image/upload/v1685715856/4_q7lbuz.webp",
+    "https://res.cloudinary.com/deaejawfj/image/upload/v1685715853/3_dwmbxj.webp",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,32 +39,34 @@ const ImageGallery = () => {
       ref={ref}
       className={`flex flex-wrap justify-center items-center  relative`}
     >
-      <motion.div
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        variants={{ visible: { transition: { staggerChildren: 1 } } }}
-        className={`flex flex-wrap justify-center items-center w-full h-full z-10 `}
-        onAnimationComplete={() => {
-          setCompleteAnimation(!completedAnimation);
-        }}
-      >
-        {images.map((image: string | undefined, index: number) => (
-          <motion.img
-            key={index}
-            src={image}
-            onLoad={handleImageLoad}
-            alt="Imagem do Mosaico do site da OTC Soluções em TI"
-            className={` w-1/4 h-1/4 object-cover ${
-              completedAnimation
-                ? ""
-                : " brightness-[0.07] transition-all duration-150 ease-in"
-            }  `}
-            style={{ zIndex: images.length - currentIndex + index }}
-            custom={index}
-            variants={imageVariants}
-          />
-        ))}
-      </motion.div>
+      <LazyMotion features={domAnimation}>
+        <m.div
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={{ visible: { transition: { staggerChildren: 1 } } }}
+          className={`flex flex-wrap justify-center items-center w-full h-full z-10 `}
+          onAnimationComplete={() => {
+            setCompleteAnimation(!completedAnimation);
+          }}
+        >
+          {images.map((image: string | undefined, index: number) => (
+            <m.img
+              key={index}
+              src={image}
+              onLoad={handleImageLoad}
+              alt="Imagem do Mosaico do site da OTC Soluções em TI"
+              className={` w-1/4 h-1/4 object-cover ${
+                completedAnimation
+                  ? ""
+                  : " brightness-[0.07] transition-all duration-150 ease-in"
+              }  `}
+              style={{ zIndex: images.length - currentIndex + index }}
+              custom={index}
+              variants={imageVariants}
+            />
+          ))}
+        </m.div>
+      </LazyMotion>
       <div
         className={`absolute inset-x-0 top-[10%] bottom-0 max-w-screen-lg  left-0  flex flex-col justify-center mx-auto z-10 ${
           completedAnimation

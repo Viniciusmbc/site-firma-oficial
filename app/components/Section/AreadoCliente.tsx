@@ -15,19 +15,10 @@ export default function AreadoCliente() {
   return (
     <div className="w-full min-h-screen flex items-center justify-center ">
       <div className="w-full h-screen rounded-lg shadow-2xl overflow-hidden relative">
-        <Image
-          src="https://res.cloudinary.com/deaejawfj/image/upload/e_recolor,o_100/v1683496739/bgareadocliente_zl0l5c.webp"
-          responsive={[
-            {
-              size: { width: 100, height: 100 },
-              maxWidth: 500,
-            },
-            {
-              size: { width: 600, height: 600 },
-            },
-          ]}
-          dprVariants={[1, 3]}
+        <img
+          src="https://res.cloudinary.com/deaejawfj/image/upload/v1683496739/bgareadocliente_zl0l5c.webp"
           className="absolute inset-0 h-screen w-screen object-cover"
+          alt="Imagem de fundo da área do cliente da OTC Soluções em TI"
         />
 
         <div

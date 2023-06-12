@@ -9,11 +9,6 @@ import ImageGallery from "~/components/Mosaic/ImageGallery";
 import imagemabout1 from "public/about1.png";
 import imagemabout2 from "public/about2.png";
 import imagemabout3 from "public/about3.png";
-import image2 from "public/2.png";
-import image3 from "public/3.png";
-import image4 from "public/4.png";
-import image5 from "public/5.png";
-import image6 from "public/6.png";
 
 // Data
 import { services } from "~/data/services";
