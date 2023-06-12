@@ -10,8 +10,6 @@ const ImageGallery = () => {
     "https://res.cloudinary.com/deaejawfj/image/upload/v1685715852/2_bsbbil.webp",
     "https://res.cloudinary.com/deaejawfj/image/upload/v1685715852/7_zgmfcd.webp",
     "https://res.cloudinary.com/deaejawfj/image/upload/v1685715852/5_f4zvnl.webp",
-    "https://res.cloudinary.com/deaejawfj/image/upload/v1685715856/4_q7lbuz.webp",
-    "https://res.cloudinary.com/deaejawfj/image/upload/v1685715853/3_dwmbxj.webp",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -55,7 +53,7 @@ const ImageGallery = () => {
               src={image}
               onLoad={handleImageLoad}
               alt="Imagem do Mosaico do site da OTC Soluções em TI"
-              className={` w-1/4 h-1/4 object-cover ${
+              className={` w-1/3 object-cover ${
                 completedAnimation
                   ? ""
                   : " brightness-[0.07] transition-all duration-150 ease-in"
