@@ -17,7 +17,6 @@ export default function Navbar() {
   const menuItems: string[] = ["Home", "Serviços", "Sobre nós", "Blog"];
 
   const changeBackground = () => {
-    console.log(window.scrollY);
     if (window.scrollY >= 250) {
       setChangeNav(true);
     } else {
@@ -65,8 +64,8 @@ export default function Navbar() {
           </figure>
         </>
         <div
-          className={`fixed top-0 left-0 bottom-0 flex w-[60%] max-w-sm flex-col overflow-y-auto border-primeiroazul border-r bg-white py-6 px-6 h-[500px]  rounded-br-[99px] transition-all ease-in-out duration-200 ${
-            isOpen ? "translate-x-0" : "-translate-x-full"
+          className={`fixed top-0 right-0 bottom-0 flex w-[60%] max-w-sm flex-col overflow-y-auto border-primeiroazul border-r bg-white py-6 px-6 h-[500px]  rounded-br-[99px] transition-all ease-in-out duration-200 ${
+            isOpen ? "translate-x-0" : "translate-x-full"
           } md:hidden  `}
         >
           <ul className="z-50 mt-20 space-y-8">
