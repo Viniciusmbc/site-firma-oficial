@@ -64,7 +64,7 @@ export default function Navbar() {
           </figure>
         </>
         <div
-          className={`fixed top-0 right-0 bottom-0 flex w-[60%] max-w-sm flex-col overflow-y-auto border-primeiroazul border-r bg-white py-6 px-6 h-[500px]  rounded-br-[99px] transition-all ease-in-out duration-200 ${
+          className={`fixed top-0 right-0 bottom-0 flex w-[60%] max-w-sm flex-col overflow-y-auto border-primeiroazul border-l bg-white py-6 px-6 h-[500px]  rounded-br-[99px] transition-all ease-in-out duration-200 ${
             isOpen ? "translate-x-0" : "translate-x-full"
           } md:hidden  `}
         >
