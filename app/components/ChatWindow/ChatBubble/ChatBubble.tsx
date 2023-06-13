@@ -119,7 +119,7 @@ const ChatBubble: React.FC<ChatBubbleProps> = ({ message }) => {
           className="w-full h-full max-w-[100px] max-h-[100px] shadow rounded-full animate-pulse"
         />
         <motion.div
-          className="bg-blue-500 text-white px-4 py-2 rounded-lg cursor-pointer"
+          className="bg-blue-500 text-black font-semibold text-lg px-4 py-2 rounded-lg cursor-pointer"
           initial="hidden"
           animate={isChatOpen ? "hidden" : "visible"}
           variants={chatBubbleVariants}

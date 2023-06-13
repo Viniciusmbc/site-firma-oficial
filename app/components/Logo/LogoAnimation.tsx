@@ -1,8 +1,7 @@
 import brainImage from "public/logo/LogoOtc.png";
-import lua5 from "public/logo/lua3.png";
 import lua2 from "public/logo/lua2.png";
 
-import { mirrorEasing, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const LogoAnimation = () => {
   return (

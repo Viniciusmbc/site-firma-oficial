@@ -12,7 +12,7 @@ import {
 
 export default function Footer() {
   return (
-    <div className=" bg-black w-full bg-cover bg-center  bg-[url('../public/Background/imagembgfooter.png')] ">
+    <div className=" bg-black w-full bg-cover bg-center backgroundImageFooter  ">
       <footer className=" w-full mx-auto pt-14 ">
         <p className=" w-full max-w-screen-lg text-white mb-6 flex justify-center mx-auto text-lg">
           Vamos conversar!

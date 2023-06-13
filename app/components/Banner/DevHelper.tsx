@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-import devhelperimg from "public/DevHelper/devhelperimg.png";
 import HighlightWrapper from "../TypeWritterEffect/atoms/HighlightWrapper";
-import { Image } from "remix-image";
 
 export default function DevHelperBanner() {
   return (
@@ -19,7 +17,7 @@ export default function DevHelperBanner() {
           Precisa de ajuda para finalizar seus freelas ou projetos pessoais?
         </p>
 
-        <h2 className="text-3xl text-[#098A5B] my-16  max-w-2xl">
+        <h2 className="text-3xl text-[#CCCCCC] my-16  max-w-2xl">
           Deixe a{" "}
           <motion.span
             className="text-white animate-pulse"

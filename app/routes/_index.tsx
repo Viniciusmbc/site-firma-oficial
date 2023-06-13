@@ -157,8 +157,8 @@ export default function Index() {
           <ImageGallery />
         </section>
       </div>
-      <Marquee pauseOnHover={true} speed={40} className=" bg-[#067D51]">
-        <p className=" py-4 text-[#D9D9D9] text-4xl">
+      <Marquee pauseOnHover={true} speed={40} className=" bg-[#06754C]">
+        <p className=" py-4 text-[#F2F2F2] text-4xl">
           Crie, cresça e venda mais: serviços de e-commerce, automação do
           WhatsApp e relatórios mensais de tráfego para sua empresa.
         </p>
