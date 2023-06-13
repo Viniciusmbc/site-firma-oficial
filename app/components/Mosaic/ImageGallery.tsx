@@ -105,7 +105,7 @@ const ImageGallery = () => {
 
         <Link
           to={"/orçamento"}
-          className=" border border-[#0CB074] text-white rounded p-5  my-9 w-full max-w-xs  mx-auto text-2xl font-bold text-center hover:text-white transition-all duration-150 ease-in"
+          className=" border border-[#0CB074] text-white rounded p-5  my-9 w-full max-w-xs  mx-auto text-2xl font-bold text-center hover:text-[#0CB074] transition-all duration-150 ease-in"
         >
           Faça um orçamento gratuito agora!
         </Link>
