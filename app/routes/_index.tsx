@@ -24,7 +24,36 @@ import Image from "remix-image";
 
 // Meta
 export const meta: V2_MetaFunction = () => {
-  return [{ title: "OTC Soluções em TI" }];
+  return [
+    { title: "OTC Developer | Desenvolvimento websites" },
+    {
+      property: "og:title",
+      content: "OTC Developer",
+    },
+    {
+      name: "description",
+      content:
+        "Oferecemos soluções de TI personalizadas, desenvolvimento de sites, criação de conteúdo e e-commerce com excelência e agilidade. Especialistas em landing pages inovadoras para atender às suas necessidades com eficiência.",
+    },
+    {
+      property: "og:description",
+      content:
+        "Oferecemos soluções de TI personalizadas, desenvolvimento de sites, criação de conteúdo e e-commerce com excelência e agilidade. Especialistas em landing pages inovadoras para atender às suas necessidades com eficiência.",
+    },
+    {
+      name: "keywords",
+      content:
+        "soluções TI, desenvolvimento de sites, criação de conteúdo, e-commerce, landing pages",
+    },
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "OTC Developer",
+        url: "https://otcdeveloper.com",
+      },
+    },
+  ];
 };
 
 export default function Index() {

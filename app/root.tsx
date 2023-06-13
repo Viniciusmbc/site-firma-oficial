@@ -7,7 +7,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction, V2_MetaFunction } from "@remix-run/node";
 import styles from "./tailwind.css";
 import Navbar from "~/components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -16,12 +16,33 @@ import { textherocards } from "./data/textherocards";
 import CardsHeroSection from "./components/Cards/CardsHeroSection";
 import ChatWindow from "./components/ChatWindow/ChatWindow";
 import ButtonWithAnimatedBackground from "./components/AnimateBackground/ButtonWithAnimatedBackground";
-import remixImageStyles from "remix-image/remix-image.css";
 
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: styles },
-  { rel: "stylesheet", href: remixImageStyles },
-];
+export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
+
+export const meta: V2_MetaFunction = () => {
+  return [
+    { title: "OTC Developer | Desenvolvimento websites" },
+    {
+      property: "og:title",
+      content: "OTC Developer",
+    },
+    {
+      name: "description",
+      content:
+        "Oferecemos soluções de TI personalizadas, desenvolvimento de sites, criação de conteúdo e e-commerce com excelência e agilidade. Especialistas em landing pages inovadoras para atender às suas necessidades com eficiência.",
+    },
+    {
+      property: "og:description",
+      content:
+        "Oferecemos soluções de TI personalizadas, desenvolvimento de sites, criação de conteúdo e e-commerce com excelência e agilidade. Especialistas em landing pages inovadoras para atender às suas necessidades com eficiência.",
+    },
+    {
+      name: "keywords",
+      content:
+        "soluções TI, desenvolvimento de sites, criação de conteúdo, e-commerce, landing pages",
+    },
+  ];
+};
 
 export default function App() {
   return (
