@@ -99,47 +99,23 @@ export default function Index() {
 
           <p className=" text-[#098A5B] mb-10 mt-2"></p>
           <div className=" grid gap-4 md:justify-between md:grid-rows-2 md:grid-cols-2 h-full items-center place-items-center ">
-            <Image
-              loaderUrl="/api/image"
+            <img
               src={imagemabout1}
-              responsive={[
-                {
-                  size: {
-                    width: 100,
-                    height: 100,
-                  },
-                  maxWidth: 200,
-                },
-              ]}
-              dprVariants={[1, 3]}
+              alt="imagem sobre nós"
+              width={100}
+              height={100}
             />
-            <Image
-              loaderUrl="/api/image"
+            <img
               src={imagemabout2}
-              responsive={[
-                {
-                  size: {
-                    width: 100,
-                    height: 100,
-                  },
-                  maxWidth: 200,
-                },
-              ]}
-              dprVariants={[1, 3]}
+              alt="imagem sobre nós"
+              width={100}
+              height={100}
             />
-            <Image
-              loaderUrl="/api/image"
+            <img
               src={imagemabout3}
-              responsive={[
-                {
-                  size: {
-                    width: 100,
-                    height: 100,
-                  },
-                  maxWidth: 200,
-                },
-              ]}
-              dprVariants={[1, 3]}
+              alt="imagem sobre nós"
+              width={100}
+              height={100}
             />
           </div>
           <div className=" grid grid-cols-1 md:grid-cols-3 justify-center items-center divide-y-2 md:divide-x-2 divide-[#098A5B]">
