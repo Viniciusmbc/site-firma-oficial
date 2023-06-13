@@ -58,7 +58,7 @@ export default function Navbar() {
               }`}
             />
           </button>
-          <figure className=" pt-1 mr-auto w-fit md:hidden">
+          <figure className=" pt-1 ml-auto w-fit md:hidden">
             {" "}
             <LogoAnimation />
           </figure>
