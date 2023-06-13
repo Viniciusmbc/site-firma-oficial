@@ -139,7 +139,7 @@ const ChatBubble: React.FC<ChatBubbleProps> = ({ message }) => {
             {userName === "" ? (
               <>
                 <motion.div
-                  className="bg-blue-500 text-white px-4 py-2 rounded-lg text-center text-lg"
+                  className="bg-blue-500 text-black px-4 py-2 rounded-lg text-center text-lg"
                   initial="hidden"
                   animate="visible"
                   variants={chatBubbleVariants}
@@ -155,13 +155,13 @@ const ChatBubble: React.FC<ChatBubbleProps> = ({ message }) => {
                 />
                 <div className="flex justify-between mt-4">
                   <button
-                    className="px-4 py-2 bg-blue-500 text-white rounded-lg"
+                    className="px-4 py-2 bg-blue-500 text-black rounded-lg"
                     onClick={handleSendMessage}
                   >
                     Enviar
                   </button>
                   <button
-                    className="px-4 py-2 bg-red-500 text-white rounded-lg ml-2"
+                    className="px-4 py-2 bg-red-500 text-black rounded-lg ml-2"
                     onClick={handleCloseChat}
                   >
                     Fechar
@@ -171,7 +171,7 @@ const ChatBubble: React.FC<ChatBubbleProps> = ({ message }) => {
             ) : selectedOption === "" ? (
               <>
                 <motion.div
-                  className="bg-blue-500 text-white px-4 py-2 rounded-lg text-center text-lg"
+                  className="bg-blue-500 text-black px-4 py-2 rounded-lg text-center text-lg"
                   initial="hidden"
                   animate="visible"
                   variants={chatBubbleVariants}
@@ -213,13 +213,13 @@ const ChatBubble: React.FC<ChatBubbleProps> = ({ message }) => {
                 </div>
                 <div className="flex justify-between mt-4">
                   <button
-                    className="px-4 py-2 bg-blue-500 text-white rounded-lg"
+                    className="px-4 py-2 bg-blue-500 text-black rounded-lg"
                     onClick={handleSendMessage}
                   >
                     Enviar
                   </button>
                   <button
-                    className="px-4 py-2 bg-red-500 text-white rounded-lg ml-2"
+                    className="px-4 py-2 bg-red-500 text-black rounded-lg ml-2"
                     onClick={handleCloseChat}
                   >
                     Fechar
