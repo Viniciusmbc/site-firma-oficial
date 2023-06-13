@@ -112,7 +112,7 @@ const ChatBubble: React.FC<ChatBubbleProps> = ({ message }) => {
     <div className="relative">
       <div className="flex items-center space-x-2">
         <img
-          src={iconeChat}
+          src="https://res.cloudinary.com/deaejawfj/image/upload/v1686663128/iconeChat_ly8vce.webp"
           width={100}
           height={100}
           alt="Chat Bot Icon"

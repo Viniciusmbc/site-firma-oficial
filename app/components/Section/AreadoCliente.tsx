@@ -6,8 +6,6 @@ import { useRef } from "react";
 // Framer motion
 import { useInView } from "framer-motion";
 
-import Image from "remix-image";
-
 export default function AreadoCliente() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });

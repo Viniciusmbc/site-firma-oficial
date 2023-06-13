@@ -35,23 +35,11 @@ export default function DevHelperBanner() {
           Clique aqui e fale conosco!
         </button>
       </div>
-      <Image
-        loaderUrl="/api/image"
-        alt="Imagem do DevHelper"
-        src={devhelperimg}
-        responsive={[
-          {
-            size: {
-              width: 100,
-              height: 100,
-            },
-            maxWidth: 330,
-          },
-        ]}
-        dprVariants={[1, 3]}
-      />
+
       <img
-        src={devhelperimg}
+        src={
+          "https://res.cloudinary.com/deaejawfj/image/upload/q_40/v1686663444/devhelperimg_mtxxp0.webp"
+        }
         width={330}
         height={400}
         alt="Imagem do DevHelper"
